@@ -14,10 +14,10 @@ var gulp 			= require('gulp'),
 
 
 gulp.task('sass', function(){
-	return gulp.src('app/sass/**/*.sass')
+	return gulp.src('src/sass/**/*.sass')
 		.pipe(sass())
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true}))
-		.pipe(gulp.dest('app/css'))
+		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
 		}))
@@ -26,7 +26,7 @@ gulp.task('sass', function(){
 gulp.task('browser-sync', function(){
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: 'src'
 		},
 		notify: false
 	});
@@ -34,25 +34,25 @@ gulp.task('browser-sync', function(){
 
 gulp.task('scripts', function(){
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
+		'src/libs/jquery/dist/jquery.min.js',
+		'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglifyjs())
-		.pipe(gulp.dest('app/js'));
+		.pipe(gulp.dest('src/js'));
 });
 
 gulp.task('css-libs', ['sass'], function(){
-	return gulp.src('app/css/libs.css')
+	return gulp.src('src/css/libs.css')
 		.pipe(cssnano())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('app/css'));
+		.pipe(gulp.dest('src/css'));
 });
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function(){
-	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);	
+	gulp.watch('src/sass/**/*.sass', ['sass']);
+	gulp.watch('src/*.html', browserSync.reload);
+	gulp.watch('src/js/**/*.js', browserSync.reload);	
 });
 
 gulp.task('clean', function(){
@@ -60,7 +60,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('img', function(){
-	return gulp.src('app/img/**/*')
+	return gulp.src('src/img/**/*')
 		.pipe(cache(imagemin({
 			interlaced: true,
 			progressive: true,
@@ -72,18 +72,18 @@ gulp.task('img', function(){
 
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){
 	var buildCss = gulp.src([
-		'app/css/main.css',
-		'app/css/libs.min.css'
+		'src/css/main.css',
+		'src/css/libs.min.css'
 		])
 		.pipe(gulp.dest('dist/css'))
 
-	var buildFonts = gulp.src('app/fonts/**/*')
+	var buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'))
 
-	var buildJs = gulp.src('app/js/**/*')
+	var buildJs = gulp.src('src/js/**/*')
 		.pipe(gulp.dest('dist/js'))
 
-	var buildHtml = gulp.src('app/*.html')
+	var buildHtml = gulp.src('src/*.html')
 		.pipe(gulp.dest('dist'));
 });
 
