@@ -58,12 +58,9 @@ body {
           border-radius: 27px;
   border: 2px solid #fff; }
 
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/banner.png") no-repeat center top;
-  height: 1011px;
-  z-index: -1; }
+.header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(red), to(yellow));
+  background: -webkit-linear-gradient(red, yellow);
+  background: -o-linear-gradient(red, yellow);
+  background: linear-gradient(red, yellow); }
