@@ -1,66 +1,75 @@
 body {
-  max-width: 1920px;
-  width: 100%;
   background-color: #ffffff;
   color: #606f85;
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 32px;
-  line-height: 1; }
+  font-size: 17px; }
 
-.menu {
-  list-style: none;
-  position: absolute;
-  display: block; }
+.header {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc52a8), to(#7442bc));
+  background-image: -webkit-linear-gradient(top, #bc52a8, #7442bc);
+  background-image: -o-linear-gradient(top, #bc52a8, #7442bc);
+  background-image: linear-gradient(to bottom, #bc52a8, #7442bc); }
 
-.menu__item {
-  float: left; }
+.container {
+  padding: 0 20px;
+  margin: 0 auto; }
+  .container-section1 {
+    width: 1920px; }
 
-.menu__link {
+.nav {
+  float: left;
+  width: 100%; }
+  .nav-menu {
+    float: left;
+    width: 35%;
+    padding: 0;
+    margin-top: 70px;
+    margin-left: 79px; }
+    .nav-menu__item {
+      display: inline;
+      font-weight: 400; }
+    .nav-menu__link {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-right: 25px; }
+
+.nav-logo {
+  display: inline-block;
+  margin-top: 64px; }
+  .nav-logo__img {
+    padding-right: 10px;
+    width: 24px;
+    height: 24px; }
+
+.nav-logo a {
   text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 80px;
-  text-transform: uppercase;
-  padding-left: 25px;
-  overflow: hidden; }
-
-.logo {
-  text-align: center; }
-
-.logo a {
-  display: block;
-  color: #fff;
+  color: #ffffff;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 22px;
   font-weight: 700;
   font-style: italic;
-  line-height: 52px;
   text-transform: uppercase;
-  text-decoration: none; }
+  padding-bottom: 10px; }
 
-.menu__button {
+.nav-btn {
+  display: inline-block;
   float: right;
-  position: relative;
-  top: -40px; }
+  margin-top: 48px;
+  margin-right: 80px; }
 
 .btn {
-  display: block;
-  color: #fff;
-  font-family: "Poppins", Arial, sans-serif;
-  text-decoration: none;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 22px 41px 20px 40px;
   -webkit-border-radius: 27px;
           border-radius: 27px;
-  border: 2px solid #fff; }
-
-.header {
-  height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(red), to(yellow));
-  background: -webkit-linear-gradient(red, yellow);
-  background: -o-linear-gradient(red, yellow);
-  background: linear-gradient(red, yellow); }
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  padding-top: 22px;
+  padding-right: 41px;
+  padding-bottom: 20px;
+  padding-left: 40px; }
