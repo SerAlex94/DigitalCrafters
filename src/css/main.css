@@ -1,4 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
+  overflow-x: hidden;
   background-color: #ffffff;
   color: #606f85;
   font-family: "Poppins", Arial, sans-serif;
@@ -12,54 +17,50 @@ body {
   background-image: linear-gradient(to bottom, #bc52a8, #7442bc); }
 
 .container {
+  max-width: 1680px;
   padding: 0 20px;
   margin: 0 auto; }
-  .container-section1 {
+  .container--nav {
     width: 1920px; }
 
 .nav {
   float: left;
   width: 100%; }
-  .nav-menu {
-    float: left;
-    width: 35%;
-    padding: 0;
-    margin-top: 70px;
-    margin-left: 79px; }
-    .nav-menu__item {
-      display: inline;
-      font-weight: 400; }
-    .nav-menu__link {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 14px;
-      text-transform: uppercase;
-      padding-right: 25px; }
+
+.nav-menu {
+  float: left;
+  width: 35%;
+  padding: 0; }
+  .nav-menu__item {
+    display: inline;
+    font-weight: 400; }
+  .nav-menu__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-right: 25px; }
 
 .nav-logo {
+  width: 30%;
   display: inline-block;
-  margin-top: 64px; }
+  text-align: center; }
+  .nav-logo__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase; }
   .nav-logo__img {
-    padding-right: 10px;
     width: 24px;
     height: 24px; }
-
-.nav-logo a {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  font-style: italic;
-  text-transform: uppercase;
-  padding-bottom: 10px; }
 
 .nav-btn {
   display: inline-block;
   float: right;
-  width: 35%;
-  margin-top: 48px;
-  margin-right: 80px; }
+  width: 35%; }
 
 .btn {
   float: right;
@@ -71,7 +72,4 @@ body {
           border-radius: 27px;
   border: 2px solid #ffffff;
   text-decoration: none;
-  padding-top: 22px;
-  padding-right: 41px;
-  padding-bottom: 20px;
-  padding-left: 40px; }
+  padding: 20px 40px; }

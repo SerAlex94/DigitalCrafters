@@ -1,87 +1,90 @@
+*
+    box-sizing: border-box
+
 body
+    overflow-x: hidden
     background-color: #ffffff
     color: #606f85
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-
-
 .header
-	height: 100vh
-	background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
+    height: 100vh
+    background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
 
 .container
-	padding: 0 20px;
-	margin: 0 auto
-	&-section1
-		width: 1920px
-
+    max-width: 1680px
+    padding: 0 20px
+    margin: 0 auto
+    &--nav
+        width: 1920px
 
 .nav
-	float: left
-	width: 100%
-	&-menu
-		float: left
-		width: 35%
-		padding: 0 
-		margin:
-			top: 70px
-			left: 79px
+    float: left
+    width: 100%
 
-		&__item
-			display: inline
-			font-weight: 400
+.nav-menu
+    float: left
+    width: 35%
+    padding: 0
+    //margin:
+        //top: 70px
+        //left: 79px
 
-		&__link
-			text-decoration: none
-			color: #ffffff
-			font-size: 14px
-			text-transform: uppercase
-			padding-right: 25px
+    &__item
+        display: inline
+        font-weight: 400
+
+    &__link
+        text-decoration: none
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        padding-right: 25px
 
 .nav-logo
-	display: inline-block
-	margin:
-			top: 64px
-	&__img
-		padding:
-			right: 10px
-		width: 24px
-		height: 24px
-	
-.nav-logo
-	a
-		text-decoration: none
-		color: #ffffff
-		font-family: "Oswald", Arial, sans-serif
-		font-size: 22px
-		font-weight: 700
-		font-style: italic
-		text-transform: uppercase
-		padding:
-			bottom: 10px
+    width: 30%
+    display: inline-block
+    text-align: center
+    //margin:
+    //    top: 64px
+    &__link
+        text-decoration: none
+        color: #ffffff
+        font-family: "Oswald", Arial, sans-serif
+        font-size: 22px
+        font-weight: 700
+        font-style: italic
+        text-transform: uppercase
+        //padding:
+        //    bottom: 10px
+    &__img
+        //padding:
+        //    right: 10px
+        width: 24px
+        height: 24px
 
 .nav-btn
-	display: inline-block;
-	float: right
-	width: 35%
-	margin:
-		top: 48px
-		right: 80px
-	
+    display: inline-block
+    float: right
+    width: 35%
+//margin:
+//    top: 48px
+//right: 80px
 
 .btn
-	float: right
-	color: #ffffff
-	font-size: 14px
-	font-weight: 400
-	text-transform: uppercase
-	border-radius: 27px
-	border: 2px solid #ffffff
-	text-decoration: none
-	padding:
-		top: 22px
-		right: 41px
-		bottom: 20px
-		left: 40px
+    float: right
+    color: #ffffff
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    border-radius: 27px
+    border: 2px solid #ffffff
+    text-decoration: none
+    padding: 20px 40px
+    //padding:
+    //    top: 22px
+    //    right: 41px
+    //    bottom: 20px
+    //    left: 40px
 	
