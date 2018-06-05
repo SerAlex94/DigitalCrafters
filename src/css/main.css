@@ -11,11 +11,11 @@ body {
 
 /* --- header --- */
 .header {
-  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bc52a8), to(#7442bc));
   background-image: -webkit-linear-gradient(top, #bc52a8, #7442bc);
   background-image: -o-linear-gradient(top, #bc52a8, #7442bc);
-  background-image: linear-gradient(to bottom, #bc52a8, #7442bc); }
+  background-image: linear-gradient(to bottom, #bc52a8, #7442bc);
+  padding: 50px 0; }
 
 /* --- navigation --- */
 .container {
@@ -70,7 +70,7 @@ body {
   display: inline-block;
   float: right;
   text-align: right;
-  font-family: "Poppins",  Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   width: 40%; }
   .nav-btn a {
     color: #ffffff;
@@ -85,13 +85,13 @@ body {
 /* --- banner --- */
 .banner {
   text-align: center;
+  margin-top: 142px;
   /* text-style */ }
   .banner-head {
     opacity: 0.5;
     color: #ffffff;
     font-size: 24px;
-    text-transform: uppercase;
-    margin-top: 142px; }
+    text-transform: uppercase; }
   .banner-info {
     display: block;
     color: #ffffff;
@@ -111,13 +111,11 @@ body {
 /* --- buttons style --- */
 .btn {
   display: inline-block;
-  width: 526px;
-  height: 105px;
   -webkit-border-radius: 53px;
           border-radius: 53px;
-  font-family: "Poppins",  Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   position: relative; }
-  .btn-banner {
+  .btn--banner {
     background-color: #ffffff;
     text-decoration: none;
     color: #673fbf;
@@ -128,33 +126,26 @@ body {
     padding-bottom: 43px;
     padding-left: 64px;
     text-transform: uppercase; }
-    .btn-banner:after {
+    .btn--banner:after {
       content: '';
-      display: block;
       position: absolute;
-      top: -19px;
-      right: 0px;
+      top: -20px;
+      right: -20px;
       left: -20px;
-      bottom: 0;
-      width: 566px;
-      height: 145px;
+      bottom: -20px;
       -webkit-border-radius: 73px;
               border-radius: 73px;
       background-color: #ffffff;
       opacity: 0.25; }
-  .btn-about {
+  .btn--about {
     background-color: #673fbf;
     color: #ffffff;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    padding-top: 41px;
-    padding-right: 64px;
-    padding-bottom: 43px;
-    padding-left: 64px;
-    margin-top: 60px;
-    margin-bottom: 100px; }
+    padding: 41px 63px;
+    margin: 60px 0 100px; }
 
 /* --- section about --- */
 .about {
@@ -163,28 +154,38 @@ body {
   background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%);
   text-align: center;
   margin-top: 140px; }
-  .about-preheading {
-    color: #673fbf;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase; }
-  .about-text {
-    line-height: 32px;
-    padding: 0 10px; }
-  .about-img {
+  .about__img {
     margin-top: 40px;
     margin-bottom: 10px; }
 
-h2 {
+.title {
+  position: relative;
   color: #29384d;
   font-size: 42px;
   font-weight: 600;
   padding: 0 30px;
   margin-top: 24px; }
-  h2:after {
+  .title--texted:before {
+    content: 'HOW WE CAN HELP YOU';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+    color: #673fbf;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .title:after {
     content: '';
     display: block;
     width: 70px;
     height: 4px;
     background-color: #673fbf;
     margin: 49px auto; }
+
+.text {
+  padding: 10px 0;
+  line-height: 32px; }

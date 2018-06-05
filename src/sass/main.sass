@@ -11,25 +11,25 @@ body
 /* --- header --- */
 
 .header
-    height: 100vh
     background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
-	
+    padding: 50px 0
+
 /* --- navigation --- */
 
 .container
-	max-width: 1680px
-	padding: 0 20px
-	margin: 0 auto
-	&--nav
-		width: 1920px
-		&:after
-			content: ""
-			display: table
-			clear: both
-	&--banner
-		width: 1080px
-	&--about
-		width: 870px
+    max-width: 1680px
+    padding: 0 20px
+    margin: 0 auto
+    &--nav
+        width: 1920px
+        &:after
+            content: ""
+            display: table
+            clear: both
+    &--banner
+        width: 1080px
+    &--about
+        width: 870px
 
 .nav
     width: 100%
@@ -65,134 +65,129 @@ body
         height: 24px
 
 .nav-btn
-	display: inline-block
-	float: right
-	text-align: right
-	font-family: "Poppins",  Arial, sans-serif;
-	width: 40%
-	a
-		color: #ffffff
-		font-size: 14px
-		text-transform: uppercase
-		border-radius: 27px
-		border: 2px solid #ffffff
-		text-decoration: none
-		padding: 20px 40px
+    display: inline-block
+    float: right
+    text-align: right
+    font-family: "Poppins", Arial, sans-serif;
+    width: 40%
+    a
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        border-radius: 27px
+        border: 2px solid #ffffff
+        text-decoration: none
+        padding: 20px 40px
 
 /* --- banner --- */
  
 .banner
-	text-align: center
+    text-align: center
+    margin-top: 142px
 
-	/* text-style */
-	&-head
-		opacity: 0.5
-		color: #ffffff
-		font-size: 24px
-		text-transform: uppercase
-		margin:
-			top: 142px
-	&-info
-		display: block
-		color: #ffffff
-		font-size: 76px
-		line-height: 90px
-		margin: 
-			top: 31px
-			bottom: 22px
-	&-descr
-		display: block
-		color: #ffffff
-		font-size: 24px
-		font-weight: 300
-		line-height: 42px
-		padding: 0 65px
-		margin:
-			bottom: 58px
+    /* text-style */
+    &-head
+        opacity: 0.5
+        color: #ffffff
+        font-size: 24px
+        text-transform: uppercase
+    &-info
+        display: block
+        color: #ffffff
+        font-size: 76px
+        line-height: 90px
+        margin:
+            top: 31px
+            bottom: 22px
+    &-descr
+        display: block
+        color: #ffffff
+        font-size: 24px
+        font-weight: 300
+        line-height: 42px
+        padding: 0 65px
+        margin:
+            bottom: 58px
 
 /* --- buttons style --- */
 
 .btn
-	display: inline-block
-	width: 526px
-	height: 105px
-	border-radius: 53px
-	font-family: "Poppins",  Arial, sans-serif;
-	position: relative
-	&-banner
-		background-color: #ffffff
-		text-decoration: none
-		color: #673fbf
-		font-size: 24px
-		font-weight: 600
-		padding:
-			top: 43px
-			right: 64px
-			bottom: 43px
-			left: 64px
-		text-transform: uppercase
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			top: -19px
-			right: 0px
-			left: -20px
-			bottom: 0
-			width: 566px
-			height: 145px
-			border-radius: 73px
-			background-color: #ffffff
-			opacity: 0.25
-	&-about
-		background-color: #673fbf
-		color: #ffffff
-		font-size: 24px
-		font-weight: 600
-		text-transform: uppercase
-		text-decoration: none
-		padding:
-			top: 41px
-			right: 64px
-			bottom: 43px
-			left: 64px
-		margin:
-			top: 60px
-			bottom: 100px
-
+    display: inline-block
+    border-radius: 53px
+    font-family: "Poppins", Arial, sans-serif;
+    position: relative
+    &--banner
+        background-color: #ffffff
+        text-decoration: none
+        color: #673fbf
+        font-size: 24px
+        font-weight: 600
+        padding:
+            top: 43px
+            right: 64px
+            bottom: 43px
+            left: 64px
+        text-transform: uppercase
+        &:after
+            content: ''
+            position: absolute
+            top: -20px
+            right: -20px
+            left: -20px
+            bottom: -20px
+            border-radius: 73px
+            background-color: #ffffff
+            opacity: 0.25
+    &--about
+        background-color: #673fbf
+        color: #ffffff
+        font-size: 24px
+        font-weight: 600
+        text-transform: uppercase
+        text-decoration: none
+        padding: 41px 63px
+        margin: 60px 0 100px
 
 /* --- section about --- */
 
 .about
-	background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
-	text-align: center
-	margin:
-		top: 140px
-	&-preheading
-		color: #673fbf
-		font-size: 16px
-		font-weight: 600
-		text-transform: uppercase
-	&-text
-		line-height: 32px
-		padding: 0 10px
-	&-img
-		margin:
-			top: 40px
-			bottom: 10px
+    background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
+    text-align: center
+    margin:
+        top: 140px
+    &__img
+        margin:
+            top: 40px
+            bottom: 10px
 
-h2 
-	color: #29384d
-	font-size: 42px
-	font-weight: 600
-	padding: 0 30px
-	margin:
-		top: 24px
-	&:after
-		content: ''
-		display: block
-		width: 70px
-		height: 4px
-		background-color: #673fbf
-		margin: 49px auto 
+.title
+    position: relative
+    color: #29384d
+    font-size: 42px
+    font-weight: 600
+    padding: 0 30px
+    margin:
+        top: 24px
+    &--texted
+        &:before
+            content: 'HOW WE CAN HELP YOU'
+            position: absolute
+            top: -30px
+            left: 50%
+            transform: translateX(-50%)
+            text-align: center
+            color: #673fbf
+            font-size: 16px
+            font-weight: 600
+            text-transform: uppercase
+    &:after
+        content: ''
+        display: block
+        width: 70px
+        height: 4px
+        background-color: #673fbf
+        margin: 49px auto
 
+.text
+    padding: 10px 0
+    line-height: 32px
