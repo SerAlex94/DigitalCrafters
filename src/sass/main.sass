@@ -12,7 +12,6 @@ body
 
 .header
     background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
-    padding: 50px 0
 
 /* --- navigation --- */
 
@@ -29,14 +28,14 @@ body
     &--banner
         width: 1080px
     &--about
-        width: 870px
+        width: 910px
+        padding-bottom: 40px
 
 .nav
     width: 100%
     line-height: 152px
 
 .nav-menu
-    width: 40%
     float: left
     &__item
         display: inline
@@ -49,41 +48,23 @@ body
         padding-right: 25px
 
 .nav-logo
-    width: 20%
-    display: inline-block
-    text-align: center
-    &__link
-        text-decoration: none
-        color: #ffffff
-        font-family: "Oswald", Arial, sans-serif
-        font-size: 22px
-        font-weight: 700
-        font-style: italic
-        text-transform: uppercase
-    &__img
-        width: 24px
-        height: 24px
+    width: 200px
+    position: absolute
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
 .nav-btn
-    display: inline-block
     float: right
-    text-align: right
     font-family: "Poppins", Arial, sans-serif;
-    width: 40%
-    a
-        color: #ffffff
-        font-size: 14px
-        text-transform: uppercase
-        border-radius: 27px
-        border: 2px solid #ffffff
-        text-decoration: none
-        padding: 20px 40px
 
 /* --- banner --- */
  
 .banner
     text-align: center
     margin-top: 142px
+    padding-bottom: 80px;
 
     /* text-style */
     &-head
@@ -116,6 +97,14 @@ body
     border-radius: 53px
     font-family: "Poppins", Arial, sans-serif;
     position: relative
+    &--nav
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        border-radius: 27px
+        border: 2px solid #ffffff
+        text-decoration: none
+        padding: 20px 40px	
     &--banner
         background-color: #ffffff
         text-decoration: none
@@ -140,6 +129,7 @@ body
             opacity: 0.25
     &--about
         background-color: #673fbf
+        box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
         color: #ffffff
         font-size: 24px
         font-weight: 600
@@ -148,17 +138,7 @@ body
         padding: 41px 63px
         margin: 60px 0 100px
 
-/* --- section about --- */
-
-.about
-    background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
-    text-align: center
-    margin:
-        top: 140px
-    &__img
-        margin:
-            top: 40px
-            bottom: 10px
+/* --- section about & about__client --- */
 
 .title
     position: relative
@@ -166,8 +146,7 @@ body
     font-size: 42px
     font-weight: 600
     padding: 0 30px
-    margin:
-        top: 24px
+    margin-top: 24px
     &--texted
         &:before
             content: 'HOW WE CAN HELP YOU'
@@ -191,3 +170,45 @@ body
 .text
     padding: 10px 0
     line-height: 32px
+    text-align: center
+
+.about
+	background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
+	text-align: center
+	margin-top: 140px
+	&__img
+		margin: 40px 0 10px
+	&__client
+		width: 870px
+		height: 385px
+		box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
+		border-radius: 6px
+		background-color: #ffffff
+		position: relative
+		&_info
+			padding: 109px 95px 0px
+
+.client
+	padding-top: 39px
+	font-weight: 600
+	
+	&_photo
+		width: 128px
+		height: 128px
+		background-color: #74328e
+		border-radius: 50%
+		position: absolute
+		top: -17%
+		left: 50%
+		// transform: translate(-50%[, -50%])
+		// transform: translateY(-50%)
+		transform: translateX(-50%)
+	&_name
+		color: #673fbf
+	&_position
+		color: #29384d
+
+.quotes
+	position: relative
+	top: 35px
+	left: -55%
