@@ -13,7 +13,7 @@ body
 .header
     background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
 
-/* --- navigation --- */
+/* --- container width&style --- */
 
 .container
     max-width: 1680px
@@ -30,6 +30,10 @@ body
     &--about
         width: 910px
         padding-bottom: 40px
+    &--services
+    	width: 1920px
+
+/* --- navigation --- */
 
 .nav
     width: 100%
@@ -141,37 +145,44 @@ body
 /* --- section about & about__client --- */
 
 .title
-    position: relative
-    color: #29384d
-    font-size: 42px
-    font-weight: 600
-    padding: 0 30px
-    margin-top: 24px
-    &--texted
-        &:before
-            content: 'HOW WE CAN HELP YOU'
-            position: absolute
-            top: -30px
-            left: 50%
-            transform: translateX(-50%)
-            text-align: center
-            color: #673fbf
-            font-size: 16px
-            font-weight: 600
-            text-transform: uppercase
-    &:after
-        content: ''
-        display: block
-        width: 70px
-        height: 4px
-        background-color: #673fbf
-        margin: 49px auto
-
+	position: relative
+	text-align: center
+	color: #29384d
+	font-size: 42px
+	font-weight: 600
+	padding: 0 30px
+	// margin-top: 24px
+	&--texted
+		&:before
+			content: 'HOW WE CAN HELP YOU'
+			position: absolute
+			top: -30px
+			left: 50%
+			transform: translateX(-50%)
+			color: #673fbf
+			font-size: 16px
+			font-weight: 600
+			text-transform: uppercase
+	&:after
+		content: ''
+		display: block
+		width: 70px
+		height: 4px
+		background-color: #673fbf
+		margin: 49px auto
+	&--services
+		color: #ffffff
+		&:after
+			background-color: #fff
 .text
-    padding: 10px 0
-    line-height: 32px
-    text-align: center
-
+	padding: 10px 0
+	line-height: 32px
+	text-align: center
+	&-services
+		width: 540px
+		margin: 0 auto
+		color: #fff
+		font-weight: 300
 .about
 	background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
 	text-align: center
@@ -200,8 +211,6 @@ body
 		position: absolute
 		top: -17%
 		left: 50%
-		// transform: translate(-50%[, -50%])
-		// transform: translateY(-50%)
 		transform: translateX(-50%)
 	&_name
 		color: #673fbf
@@ -212,3 +221,42 @@ body
 	position: relative
 	top: 35px
 	left: -55%
+
+/* --- section services --- */
+
+.services
+	background: url(../img/services-bg.png) no-repeat center
+	text-align: center
+	&__item
+		display: inline-block;
+		vertical-align: top;
+
+		margin: 90px 30px
+		width: 370px
+		height: 332px
+		box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
+		border-radius: 5px
+		background-color: #ffffff
+		position: relative
+		&_icon
+			position: absolute
+			top: -17%
+			left: 30%
+			transform: translateX(-50%)
+			width: 109px
+			height: 109px
+			border-radius: 50%
+			background-color: #673fbf
+			text-align: center
+			line-height: 135px  /* --- ??? --- */
+		&_heading
+			padding: 87px 160px 0 41px
+			color: #29384d
+			font-size: 24px
+			font-weight: 600
+			line-height: 36px
+		&_text
+			padding: 33px 54px 40px 40px
+			color: #606f85
+			font-weight: 300
+			line-height: 32px

@@ -16,7 +16,7 @@ body {
   background-image: -o-linear-gradient(top, #bc52a8, #7442bc);
   background-image: linear-gradient(to bottom, #bc52a8, #7442bc); }
 
-/* --- navigation --- */
+/* --- container width&style --- */
 .container {
   max-width: 1680px;
   padding: 0 20px;
@@ -32,7 +32,10 @@ body {
   .container--about {
     width: 910px;
     padding-bottom: 40px; }
+  .container--services {
+    width: 1920px; }
 
+/* --- navigation --- */
 .nav {
   width: 100%;
   line-height: 152px; }
@@ -141,11 +144,11 @@ body {
 /* --- section about & about__client --- */
 .title {
   position: relative;
+  text-align: center;
   color: #29384d;
   font-size: 42px;
   font-weight: 600;
-  padding: 0 30px;
-  margin-top: 24px; }
+  padding: 0 30px; }
   .title--texted:before {
     content: 'HOW WE CAN HELP YOU';
     position: absolute;
@@ -154,7 +157,6 @@ body {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    text-align: center;
     color: #673fbf;
     font-size: 16px;
     font-weight: 600;
@@ -166,11 +168,20 @@ body {
     height: 4px;
     background-color: #673fbf;
     margin: 49px auto; }
+  .title--services {
+    color: #ffffff; }
+    .title--services:after {
+      background-color: #fff; }
 
 .text {
   padding: 10px 0;
   line-height: 32px;
   text-align: center; }
+  .text-services {
+    width: 540px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 300; }
 
 .about {
   background-image: -webkit-linear-gradient(120deg, #eff5fa 0%, #fff 80%, #fff 100%);
@@ -216,3 +227,45 @@ body {
   position: relative;
   top: 35px;
   left: -55%; }
+
+/* --- section services --- */
+.services {
+  background: url(../img/services-bg.png) no-repeat center;
+  text-align: center; }
+  .services__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 90px 30px;
+    width: 370px;
+    height: 332px;
+    -webkit-box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44);
+            box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44);
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background-color: #ffffff;
+    position: relative; }
+    .services__item_icon {
+      position: absolute;
+      top: -17%;
+      left: 30%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 109px;
+      height: 109px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      background-color: #673fbf;
+      text-align: center;
+      line-height: 135px; }
+    .services__item_heading {
+      padding: 87px 160px 0 41px;
+      color: #29384d;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px; }
+    .services__item_text {
+      padding: 33px 54px 40px 40px;
+      color: #606f85;
+      font-weight: 300;
+      line-height: 32px; }
