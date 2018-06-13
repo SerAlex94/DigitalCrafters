@@ -18,7 +18,7 @@ textarea::placeholder
 /* --- header --- */
 
 .header
-    background-image: linear-gradient(to bottom, #bc52a8, #7442bc)
+    background: linear-gradient(to bottom, #bc52a8, #7442bc)
 
 /* --- container width&style --- */
 
@@ -51,16 +51,23 @@ textarea::placeholder
     line-height: 152px
 
 .nav-menu
-    float: left
-    &__item
-        display: inline
-        font-weight: 400
-    &__link
-        text-decoration: none
-        color: #ffffff
-        font-size: 14px
-        text-transform: uppercase
-        padding-right: 25px
+	float: left
+	&__item
+		display: inline
+		font-weight: 600
+	&__link
+		text-decoration: none
+		color: #ffffff
+		font-size: 14px
+		text-transform: uppercase
+		padding: 0 12px
+		transition: 0.5s
+		&:hover
+			font-size: 17px
+			color: #b951a9
+			background-color: #fff
+			border-radius: 6px
+
 
 .nav-logo
     width: 200px
@@ -78,10 +85,6 @@ textarea::placeholder
  
 .banner
     text-align: center
-
-    padding-bottom: 80px
-
-    /* text-style */
     &-head
         opacity: 0.5
         color: #ffffff
@@ -92,9 +95,7 @@ textarea::placeholder
         color: #ffffff
         font-size: 76px
         line-height: 90px
-        margin:
-            top: 31px
-            bottom: 22px
+        margin: 31px 0 22px
     &-descr
         display: block
         color: #ffffff
@@ -102,8 +103,7 @@ textarea::placeholder
         font-weight: 300
         line-height: 42px
         padding: 0 65px
-        margin:
-            bottom: 58px
+        margin-bottom: 58px          
 
 /* --- buttons style --- */
 
@@ -119,7 +119,12 @@ textarea::placeholder
 		border-radius: 27px
 		border: 2px solid #ffffff
 		text-decoration: none
-		padding: 20px 40px	
+		padding: 20px 40px
+		transition: 0.5s	
+		&:hover
+			color: #b951a9
+			background-color: #fff
+			font-size: 17px
 	&--banner
 		background-color: #ffffff
 		text-decoration: none
@@ -128,6 +133,7 @@ textarea::placeholder
 		font-weight: 600
 		padding: 43px 64px 43px 64px
 		text-transform: uppercase
+		transition: all 1s 
 		&:after
 			content: ''
 			position: absolute
@@ -135,9 +141,23 @@ textarea::placeholder
 			right: -20px
 			left: -20px
 			bottom: -20px
+			background-color: rgba(255, 255, 255, 0.25)
+			// border: 27px solid rgba(255, 255, 255, 0.25)
 			border-radius: 73px
-			background-color: #ffffff
-			opacity: 0.25
+			transition: all 1s
+		&:before
+			content: ''
+			position: absolute
+			top: -20px
+			right: -20px
+			left: -20px
+			bottom: -20px
+			background-color: rgba(255, 255, 255, 0.25)
+			// border: 27px solid rgba(255, 255, 255, 0.25)
+			border-radius: 73px
+			opacity: 0
+			transition: all 1s
+			// background-color: rgba(255, 255, 255, 0.25)
 	&--about
 		background-color: #673fbf
 		box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
@@ -148,6 +168,7 @@ textarea::placeholder
 		text-decoration: none
 		padding: 41px 63px
 		margin: 60px 0 100px
+
 	&--contact
 		background-color: #ffffff
 		color: #673fbf;
@@ -157,6 +178,40 @@ textarea::placeholder
 		text-transform: uppercase
 		text-decoration: none
 		margin: 60px 0 100px
+
+/* --- pulse button --- */
+
+.btn--banner:hover::before,
+.btn--banner:hover::after
+	content: ''
+	position: absolute
+	left: -20px
+	right: -20px
+	top: -20px
+	bottom: -20px
+	background-color: rgba(255, 255, 255, 0.25)
+	// border: 27px solid rgba(255, 255, 255, 0.25)
+	border-radius: 73px
+	opacity: 1
+	animation: btn--banner 3s linear infinite
+
+.btn--banner:hover::before 
+	// animation-delay: 0.5s
+	animation-direction: reverse
+
+@keyframes btn--banner
+	0% 
+		transform: scale(0.5);
+		opacity: 0;
+ 
+	50% 
+		opacity: 0.7;
+ 
+	100% 
+		transform: scale(1.2);
+		opacity: 0;
+ 
+/* --- pulse button end --- */
 
 /* --- title & text style --- */
 
@@ -249,54 +304,26 @@ textarea::placeholder
 .slick-dots li
 	position: relative;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
 	margin: 0 5px;
-	padding: 0;
-	cursor: pointer;
 
 .slick-dots li button
-	font-size: 0;
-	line-height: 0;
-	display: block;
-	width: 20px;
-	height: 20px;
-	padding: 5px;
-	cursor: pointer;
 	color: transparent;
 	border: 0;
-	outline: none;
 	background: transparent;
 
-.slick-dots li button:hover,
-.slick-dots li button:focus
-	outline: none;
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before
-	opacity: 1;
-
 .slick-dots li button:before
-	font-family: 'slick';
-	font-size: 6px;
-	line-height: 20px;
 	position: absolute;
 	top: 7px;
 	left: 7px;
-	border-radius: 50%
 	content: '';
-	text-align: center;
 	width: 6px
 	height: 6px
 	background-color: #606f85
 	opacity: 0.25
-	color: black;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 
 .slick-dots li.slick-active button:before
 	opacity: .75;
-	color: black;
+
 
 
 .client
@@ -349,7 +376,6 @@ textarea::placeholder
 			background-color: #673fbf
 			text-align: center
 			padding-top: 38px
-			// line-height: 135px  /* --- ??? --- */
 		&_heading
 			padding: 87px 155px 0 41px
 			color: #29384d
