@@ -9,6 +9,36 @@ body {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 17px; }
 
+input::-webkit-input-placeholder {
+  color: #fff; }
+
+input::-moz-placeholder {
+  color: #fff; }
+
+input:-ms-input-placeholder {
+  color: #fff; }
+
+input::-ms-input-placeholder {
+  color: #fff; }
+
+input::placeholder {
+  color: #fff; }
+
+textarea::-webkit-input-placeholder {
+  color: #fff; }
+
+textarea::-moz-placeholder {
+  color: #fff; }
+
+textarea:-ms-input-placeholder {
+  color: #fff; }
+
+textarea::-ms-input-placeholder {
+  color: #fff; }
+
+textarea::placeholder {
+  color: #fff; }
+
 /* --- header --- */
 .header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bc52a8), to(#7442bc));
@@ -22,7 +52,7 @@ body {
   padding: 140px 20px 140px;
   margin: 0 auto; }
   .container--nav {
-    padding-top: 0;
+    padding: 0 20px;
     width: 1920px; }
     .container--nav:after {
       content: "";
@@ -114,10 +144,7 @@ body {
     color: #673fbf;
     font-size: 24px;
     font-weight: 600;
-    padding-top: 43px;
-    padding-right: 64px;
-    padding-bottom: 43px;
-    padding-left: 64px;
+    padding: 43px 64px 43px 64px;
     text-transform: uppercase; }
     .btn--banner:after {
       content: '';
@@ -140,6 +167,15 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     padding: 41px 63px;
+    margin: 60px 0 100px; }
+  .btn--contact {
+    background-color: #ffffff;
+    color: #673fbf;
+    padding: 41px 63px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
     margin: 60px 0 100px; }
 
 /* --- title & text style --- */
@@ -204,6 +240,7 @@ body {
   .about__img {
     margin: 40px 0 10px; }
   .about__client {
+    margin-bottom: 50px;
     width: 870px;
     height: 385px;
     -webkit-box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06);
@@ -214,6 +251,80 @@ body {
     position: relative; }
     .about__client_info {
       padding: 109px 95px 0px; }
+
+.slick-active {
+  opacity: 1; }
+
+.slick-slide {
+  opacity: 0.3; }
+
+.slick-list {
+  overflow: visible; }
+
+.slick-prev, .slick-next {
+  position: relative;
+  top: -35px;
+  margin: 10px 70px;
+  padding: 7px 0;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(99, 111, 133, 0.25); }
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer; }
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent; }
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none; }
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1; }
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  content: '';
+  text-align: center;
+  width: 6px;
+  height: 6px;
+  background-color: #606f85;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black; }
 
 .client {
   padding-top: 39px;
@@ -272,9 +383,9 @@ body {
               border-radius: 50%;
       background-color: #673fbf;
       text-align: center;
-      line-height: 135px; }
+      padding-top: 38px; }
     .services__item_heading {
-      padding: 87px 160px 0 41px;
+      padding: 87px 155px 0 41px;
       color: #29384d;
       font-size: 24px;
       font-weight: 600;
@@ -290,13 +401,16 @@ body {
   background: -webkit-linear-gradient(60deg, #eff5fa 0%, #fff 80%, #fff 100%);
   background: -o-linear-gradient(60deg, #eff5fa 0%, #fff 80%, #fff 100%);
   background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%); }
+  .portfolio-box {
+    position: relative;
+    margin-top: 40px; }
   .portfolio__item {
-    display: block;
+    display: block !important;
+    position: relative;
     text-align: left;
     margin: 0 auto;
-    padding-top: 40px;
     overflow: hidden;
-    width: 1170px;
+    width: 1170px !important;
     height: 587px;
     -webkit-box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11);
             box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11);
@@ -315,8 +429,8 @@ body {
         background-color: #188afd;
         -webkit-border-radius: 50%;
                 border-radius: 50%;
-        text-align: center;
-        padding-top: 20px; }
+        padding-top: 20px;
+        padding-left: 24px; }
       .portfolio__item-info_heading {
         color: #29384d;
         font-size: 24px;
@@ -335,6 +449,13 @@ body {
       float: left;
       width: 50%; }
 
+.portfolio-slider__buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 42.8%; }
+  .portfolio-slider__buttons .slick-prev, .portfolio-slider__buttons .slick-next {
+    margin: 0 5px; }
+
 .skills {
   float: left;
   margin-right: 10px;
@@ -352,7 +473,8 @@ body {
   background: -webkit-gradient(linear, right bottom, left top, from(#7542bb), color-stop(80%, #c75eb4), to(#c75eb4));
   background: -webkit-linear-gradient(bottom right, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
   background: -o-linear-gradient(bottom right, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
-  background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%); }
+  background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
+  text-align: center; }
 
 .form-field {
   position: relative;
@@ -365,15 +487,16 @@ body {
 .form-control {
   width: 100%;
   height: 64px;
-  padding-left: 50px;
+  padding: 11px 30px 10px 50px;
   color: #ffffff;
   font-family: Poppins;
   font-size: 17px;
   font-weight: 300;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  border: 2px solid #ffffff;
-  background-color: transparent;
-  opacity: 0.25; }
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: transparent; }
   .form-control_texted {
-    min-height: 125px; }
+    min-height: 125px;
+    padding-top: 17px;
+    resize: none; }

@@ -8,6 +8,13 @@ body
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
+input::placeholder 
+	color: #fff
+
+textarea::placeholder 
+	color: #fff
+
+
 /* --- header --- */
 
 .header
@@ -20,7 +27,7 @@ body
 	padding: 140px 20px 140px
 	margin: 0 auto
 	&--nav
-		padding-top: 0
+		padding: 0 20px
 		width: 1920px
 		&:after
 			content: ""
@@ -30,11 +37,10 @@ body
 		width: 1080px
 	&--about
 		width: 910px
-		// padding-bottom: 40px
 	&--services
 		width: 1920px
 	&--contact
-		width: 910px;
+		width: 910px
 
 
 
@@ -59,10 +65,10 @@ body
 .nav-logo
     width: 200px
     position: absolute
-    top: 5px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    top: 5px
+    left: 0
+    right: 0
+    margin: 0 auto
 
 .nav-btn
     float: right
@@ -72,8 +78,8 @@ body
  
 .banner
     text-align: center
-    // margin-top: 142px
-    padding-bottom: 80px;
+
+    padding-bottom: 80px
 
     /* text-style */
     &-head
@@ -102,50 +108,55 @@ body
 /* --- buttons style --- */
 
 .btn
-    display: inline-block
-    border-radius: 53px
-    font-family: "Poppins", Arial, sans-serif;
-    position: relative
-    &--nav
-        color: #ffffff
-        font-size: 14px
-        text-transform: uppercase
-        border-radius: 27px
-        border: 2px solid #ffffff
-        text-decoration: none
-        padding: 20px 40px	
-    &--banner
-        background-color: #ffffff
-        text-decoration: none
-        color: #673fbf
-        font-size: 24px
-        font-weight: 600
-        padding:
-            top: 43px
-            right: 64px
-            bottom: 43px
-            left: 64px
-        text-transform: uppercase
-        &:after
-            content: ''
-            position: absolute
-            top: -20px
-            right: -20px
-            left: -20px
-            bottom: -20px
-            border-radius: 73px
-            background-color: #ffffff
-            opacity: 0.25
-    &--about
-        background-color: #673fbf
-        box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
-        color: #ffffff
-        font-size: 24px
-        font-weight: 600
-        text-transform: uppercase
-        text-decoration: none
-        padding: 41px 63px
-        margin: 60px 0 100px
+	display: inline-block
+	border-radius: 53px
+	font-family: "Poppins", Arial, sans-serif
+	position: relative
+	&--nav
+		color: #ffffff
+		font-size: 14px
+		text-transform: uppercase
+		border-radius: 27px
+		border: 2px solid #ffffff
+		text-decoration: none
+		padding: 20px 40px	
+	&--banner
+		background-color: #ffffff
+		text-decoration: none
+		color: #673fbf
+		font-size: 24px
+		font-weight: 600
+		padding: 43px 64px 43px 64px
+		text-transform: uppercase
+		&:after
+			content: ''
+			position: absolute
+			top: -20px
+			right: -20px
+			left: -20px
+			bottom: -20px
+			border-radius: 73px
+			background-color: #ffffff
+			opacity: 0.25
+	&--about
+		background-color: #673fbf
+		box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
+		color: #ffffff
+		font-size: 24px
+		font-weight: 600
+		text-transform: uppercase
+		text-decoration: none
+		padding: 41px 63px
+		margin: 60px 0 100px
+	&--contact
+		background-color: #ffffff
+		color: #673fbf;
+		padding: 41px 63px
+		font-size: 24px
+		font-weight: 600
+		text-transform: uppercase
+		text-decoration: none
+		margin: 60px 0 100px
 
 /* --- title & text style --- */
 
@@ -156,7 +167,7 @@ body
 	font-size: 42px
 	font-weight: 600
 	padding: 0 30px
-	line-height: 52px;
+	line-height: 52px
 	&--texted
 		padding-top: 24px
 		&:before
@@ -206,6 +217,7 @@ body
 	&__img
 		margin: 40px 0 10px
 	&__client
+		margin-bottom: 50px
 		width: 870px
 		height: 385px
 		box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
@@ -214,6 +226,78 @@ body
 		position: relative
 		&_info
 			padding: 109px 95px 0px
+
+
+.slick
+	&-active
+		opacity: 1
+	&-slide
+		opacity: 0.3
+	&-list
+		overflow: visible
+	&-prev,&-next
+		position: relative
+		top: -35px
+		margin: 10px 70px
+		padding: 7px 0
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		background-color: transparent
+		border: 1px solid rgba(99, 111, 133, 0.25)
+
+.slick-dots li
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+
+.slick-dots li button
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: transparent;
+
+.slick-dots li button:hover,
+.slick-dots li button:focus
+	outline: none;
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+	opacity: 1;
+
+.slick-dots li button:before
+	font-family: 'slick';
+	font-size: 6px;
+	line-height: 20px;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	border-radius: 50%
+	content: '';
+	text-align: center;
+	width: 6px
+	height: 6px
+	background-color: #606f85
+	opacity: 0.25
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+.slick-dots li.slick-active button:before
+	opacity: .75;
+	color: black;
+
 
 .client
 	padding-top: 39px
@@ -244,8 +328,8 @@ body
 	background: linear-gradient(15deg, #3c334c 25%, #383047 25%, #383047 63%, #3c334c 63%)
 	text-align: center
 	&__item
-		display: inline-block;
-		vertical-align: top;
+		display: inline-block
+		vertical-align: top
 		text-align: left
 		margin: 90px 30px
 		width: 370px
@@ -264,9 +348,10 @@ body
 			border-radius: 50%
 			background-color: #673fbf
 			text-align: center
-			line-height: 135px  /* --- ??? --- */
+			padding-top: 38px
+			// line-height: 135px  /* --- ??? --- */
 		&_heading
-			padding: 87px 160px 0 41px
+			padding: 87px 155px 0 41px
 			color: #29384d
 			font-size: 24px
 			font-weight: 600
@@ -281,17 +366,20 @@ body
 
 .portfolio 
 	background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
+	&-box
+		position: relative
+		margin-top: 40px
 	&__item
-		display: block
+		display: block !important
+		position: relative
 		text-align: left
 		margin: 0 auto
-		padding-top: 40px
 		overflow: hidden
-		width: 1170px;
-		height: 587px;
-		box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11);
-		border-radius: 5px;
-		background-color: #ffffff;
+		width: 1170px !important
+		height: 587px
+		box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
+		border-radius: 5px
+		background-color: #ffffff
 		vertical-align: top
 		&-info
 			display: inline-block
@@ -299,17 +387,18 @@ body
 			vertical-align: top
 			padding: 64px 44px 10px
 			&_icon
-				width: 77px;
-				height: 77px;
-				background-color: #188afd;
+				width: 77px
+				height: 77px
+				background-color: #188afd
 				border-radius: 50%
-				text-align: center
+				// text-align: center
 				padding-top: 20px
+				padding-left: 24px;
 			&_heading
-				color: #29384d;
-				font-size: 24px;
-				font-weight: 600;
-				line-height: 36px;
+				color: #29384d
+				font-size: 24px
+				font-weight: 600
+				line-height: 36px
 				padding: 30px 0 
 			&_text
 				text-align: left
@@ -317,11 +406,20 @@ body
 			&_skills
 				display: block
 				float: left
-				color: #29384d;
+				color: #29384d
 		&-img
 			display: inline-block
 			float: left
 			width: 50%
+
+.portfolio-slider__buttons
+	position: absolute
+	bottom: 20px
+	// right: 700px
+	right: 42.8%
+	.slick-prev,.slick-next
+		margin: 0 5px
+
 .skills
 	float: left
 	margin-right: 10px
@@ -337,28 +435,29 @@ body
 
 .contact
 	background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%)
+	text-align: center
 
 .form-field
 	position: relative
 	margin: 20px
 	&__icon
 		position: absolute
-		top: 24px;
-		left: 20px;
-
-// 	color: #fff
+		top: 24px
+		left: 20px
 
 .form-control
 	width: 100%
 	height: 64px
-	padding-left: 50px
-	color: #ffffff;
-	font-family: Poppins;
-	font-size: 17px;
-	font-weight: 300;
+	padding: 11px 30px 10px 50px
+	color: #ffffff
+	font-family: Poppins
+	font-size: 17px
+	font-weight: 300
 	border-radius: 5px
-	border: 2px solid #ffffff
-	background-color: transparent;
-	opacity: 0.25;
+	border: 2px solid rgba(255, 255, 255, 0.25)
+	background-color: transparent
 	&_texted
-		min-height: 125px;
+		min-height: 125px
+		padding-top: 17px
+		resize: none
+
