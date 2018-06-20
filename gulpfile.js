@@ -35,9 +35,6 @@ gulp.task('scripts', function () {
         'src/libs/jquery/dist/jquery.min.js',
         'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'src/libs/slick-carousel/slick/slick.js',
-        // connect Slick.js file
-        // remove Slick file from js/ folder
-        'src/libs/slick.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglifyjs())
