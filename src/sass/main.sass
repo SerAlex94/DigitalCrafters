@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i")
+@import url("https://fonts.googleapis.com/css?family=Oswald:700")
 @import url(./normalize.css)
 @import url(../libs/slick-carousel/slick/slick.css)
-@import url(./media.css)
+
 *
     box-sizing: border-box
 
@@ -11,12 +13,11 @@ body
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-input::placeholder 
-	color: #fff
+input::placeholder
+    color: #fff
 
-textarea::placeholder 
-	color: #fff
-
+textarea::placeholder
+    color: #fff
 
 /* --- header --- */
 
@@ -26,52 +27,51 @@ textarea::placeholder
 /* --- container width&style --- */
 
 .container
-	// max-width: 100%
-	// max-width: 1680px
-	padding: 140px 20px 140px
-	margin: 0 auto
-	&--nav
-		max-width: 1920px
-		padding: 0 20px
-		&:after
-			content: ""
-			display: table
-			clear: both
-	&--banner
-		width: 1080px
-	&--about
-		width: 910px
-	&--services
-		width: 1680px
-	&--contact
-		width: 910px
-
-
+    // max-width: 100%
+    // max-width: 1680px
+    padding: 140px 20px 140px
+    margin: 0 auto
+    &--nav
+        // max-width to width
+        width: 1920px
+        padding: 0 20px
+        &:after
+            content: ""
+            display: table
+            clear: both
+    &--banner
+        width: 1080px
+    &--about
+        width: 910px
+    &--services
+        width: 1680px
+    &--contact
+        width: 910px
 
 /* --- navigation --- */
 
 .nav
     width: 100%
-    line-height: 152px
+    // 152 to 100 without reason :)
+    line-height: 100px
 
 .nav-menu
-	float: left
-	&__item
-		display: inline
-		font-weight: 600
-	&__link
-		text-decoration: none
-		color: #ffffff
-		font-size: 14px
-		text-transform: uppercase
-		padding: 0 12px
-		transition: 0.5s
-		&:hover
-			font-size: 17px
-			color: #b951a9
-			background-color: #fff
-			border-radius: 6px
-
+    float: left
+    &__item
+        display: inline
+        font-weight: 600
+    &__link
+        text-decoration: none
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        padding: 0 12px
+        transition: 0.5s
+        &:hover
+            font-size: 17px
+            color: #b951a9
+            background-color: #fff
+            border-radius: 6px
 
 .nav-logo
     width: 200px
@@ -107,393 +107,383 @@ textarea::placeholder
         font-weight: 300
         line-height: 42px
         padding: 0 65px
-        margin-bottom: 58px          
+        margin-bottom: 58px
 
 /* --- buttons style --- */
 
 .btn
-	display: inline-block
-	border-radius: 53px
-	font-family: "Poppins", Arial, sans-serif
-	position: relative
-	&--nav
-		color: #ffffff
-		font-size: 14px
-		text-transform: uppercase
-		border-radius: 27px
-		border: 2px solid #ffffff
-		text-decoration: none
-		padding: 20px 40px
-		transition: 0.5s	
-		&:hover
-			color: #b951a9
-			background-color: #fff
-			font-size: 17px
-	&--banner
-		background-color: #ffffff
-		text-decoration: none
-		color: #673fbf
-		font-size: 24px
-		font-weight: 600
-		padding: 43px 64px 43px 64px
-		text-transform: uppercase
-		transition: all 1s 
-		&:after
-			content: ''
-			position: absolute
-			top: -20px
-			right: -20px
-			left: -20px
-			bottom: -20px
-			background-color: rgba(255, 255, 255, 0.25)
-			border-radius: 73px
-			transition: all 1s
-		&:before
-			content: ''
-			position: absolute
-			top: -20px
-			right: -20px
-			left: -20px
-			bottom: -20px
-			background-color: rgba(255, 255, 255, 0.25)
-			border-radius: 73px
-			opacity: 0
-			transition: all 1s
-	&--about
-		background-color: #673fbf
-		box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
-		color: #ffffff
-		font-size: 24px
-		font-weight: 600
-		text-transform: uppercase
-		text-decoration: none
-		padding: 41px 63px
-		margin: 60px 0 100px
+    display: inline-block
+    border-radius: 53px
+    font-family: "Poppins", Arial, sans-serif
+    position: relative
+    &--nav
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        border-radius: 27px
+        border: 2px solid #ffffff
+        text-decoration: none
+        padding: 20px 40px
+        transition: 0.5s
+        &:hover
+            color: #b951a9
+            background-color: #fff
+            font-size: 17px
+    &--banner
+        background-color: #ffffff
+        text-decoration: none
+        color: #673fbf
+        font-size: 24px
+        font-weight: 600
+        padding: 43px 64px 43px 64px
+        text-transform: uppercase
+        transition: all 1s
+        &:after
+            content: ''
+            position: absolute
+            top: -20px
+            right: -20px
+            left: -20px
+            bottom: -20px
+            background-color: rgba(255, 255, 255, 0.25)
+            border-radius: 73px
+            transition: all 1s
+        &:before
+            content: ''
+            position: absolute
+            top: -20px
+            right: -20px
+            left: -20px
+            bottom: -20px
+            background-color: rgba(255, 255, 255, 0.25)
+            border-radius: 73px
+            opacity: 0
+            transition: all 1s
+    &--about
+        background-color: #673fbf
+        box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
+        color: #ffffff
+        font-size: 24px
+        font-weight: 600
+        text-transform: uppercase
+        text-decoration: none
+        padding: 41px 63px
+        margin: 60px 0 100px
 
-	&--contact
-		background-color: #ffffff
-		color: #673fbf;
-		padding: 41px 63px
-		font-size: 24px
-		font-weight: 600
-		text-transform: uppercase
-		text-decoration: none
-		margin: 60px 0 100px
+    &--contact
+        background-color: #ffffff
+        color: #673fbf;
+        padding: 41px 63px
+        font-size: 24px
+        font-weight: 600
+        text-transform: uppercase
+        text-decoration: none
+        margin: 60px 0 100px
 
 /* --- pulse button --- */
 
 .btn--banner:hover::after
-	content: ''
-	position: absolute
-	left: -20px
-	right: -20px
-	top: -20px
-	bottom: -20px
-	background-color: rgba(255, 255, 255, 0.25)
-	border-radius: 73px
-	opacity: 1
-	animation: btn--banner 1s linear infinite
+    content: ''
+    position: absolute
+    left: -20px
+    right: -20px
+    top: -20px
+    bottom: -20px
+    background-color: rgba(255, 255, 255, 0.25)
+    border-radius: 73px
+    opacity: 1
+    animation: btn--banner 1s linear infinite
 
 .btn--banner:hover::before
-	opacity: 1
+    opacity: 1
 
-.btn--banner:hover::before 
-	animation-delay: 0.5s
+.btn--banner:hover::before
+    animation-delay: 0.5s
 
 @keyframes btn--banner
-	0% 
-		transform: scale(0.5)
-		opacity: 0
- 
-	50% 
-		opacity: 0.7
- 
-	100% 
-		transform: scale(1.2)
-		opacity: 0
- 
+    0%
+        transform: scale(0.5)
+        opacity: 0
+
+    50%
+        opacity: 0.7
+
+    100%
+        transform: scale(1.2)
+        opacity: 0
+
 /* --- pulse button end --- */
 
 /* --- slick slider --- */
 
 .slick
-	&-active
-		opacity: 1
-	&-slide
-		opacity: 0.3
-	&-list
-		overflow: visible
-	&-prev,&-next
-		position: relative
-		top: -35px
-		margin: 10px 70px
-		padding: 7px 0
-		width: 32px
-		height: 32px
-		border-radius: 50%
-		background-color: transparent
-		border: 1px solid rgba(99, 111, 133, 0.25)
+    &-active
+        opacity: 1
+    &-slide
+        opacity: 0.3
+    &-list
+        overflow: visible
+    &-prev, &-next
+        position: relative
+        top: -35px
+        margin: 10px 70px
+        padding: 7px 0
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        background-color: transparent
+        border: 1px solid rgba(99, 111, 133, 0.25)
 
 .slick-dots li
-	position: relative
-	display: inline-block
-	margin: 0 5px
+    position: relative
+    display: inline-block
+    margin: 0 5px
 
 .slick-dots li button
-	color: transparent
-	border: 0
-	background: transparent
+    color: transparent
+    border: 0
+    background: transparent
 
 .slick-dots li button:before
-	position: absolute
-	top: 7px
-	left: 7px
-	content: ''
-	width: 6px
-	height: 6px
-	background-color: #606f85
-	opacity: 0.25
+    position: absolute
+    top: 7px
+    left: 7px
+    content: ''
+    width: 6px
+    height: 6px
+    background-color: #606f85
+    opacity: 0.25
 
 .slick-dots li.slick-active button:before
-	opacity: .75
+    opacity: .75
 
 /* --- slick dots end --- */
 
 /* --- title & text style --- */
 
 .title
-	position: relative
-	text-align: center
-	color: #29384d
-	font-size: 42px
-	font-weight: 600
-	padding: 0 30px
-	line-height: 52px
-	&--texted
-		padding-top: 24px
-		&:before
-			content: 'HOW WE CAN HELP YOU'
-			position: absolute
-			top: -30px
-			left: 50%
-			transform: translateX(-50%)
-			color: #673fbf
-			font-size: 16px
-			font-weight: 600
-			text-transform: uppercase
-	&:after
-		content: ''
-		display: block
-		width: 70px
-		height: 4px
-		background-color: #673fbf
-		margin: 49px auto
-	&--services
-		color: #ffffff
-		&:after
-			background-color: #fff
-	&--contact
-		margin: 0 50px
-		color: #ffffff
-		&:after
-			background-color: #fff
+    position: relative
+    text-align: center
+    color: #29384d
+    font-size: 42px
+    font-weight: 600
+    padding: 0 30px
+    line-height: 52px
+    &--texted
+        padding-top: 24px
+        &:before
+            content: 'HOW WE CAN HELP YOU'
+            position: absolute
+            top: -30px
+            left: 50%
+            transform: translateX(-50%)
+            color: #673fbf
+            font-size: 16px
+            font-weight: 600
+            text-transform: uppercase
+    &:after
+        content: ''
+        display: block
+        width: 70px
+        height: 4px
+        background-color: #673fbf
+        margin: 49px auto
+    &--services
+        color: #ffffff
+        &:after
+            background-color: #fff
+    &--contact
+        margin: 0 50px
+        color: #ffffff
+        &:after
+            background-color: #fff
+
 .text
-	padding: 10px 0
-	line-height: 32px
-	text-align: center
-	&-services
-		width: 540px
-		margin: 0 auto
-		color: #fff
-		font-weight: 300
-	&-portfolio
-		width: 500px
-		margin: 0 auto
+    padding: 10px 0
+    line-height: 32px
+    text-align: center
+    &-services
+        width: 540px
+        margin: 0 auto
+        color: #fff
+        font-weight: 300
+    &-portfolio
+        width: 500px
+        margin: 0 auto
 
 /* --- section about & about__client --- */
 
 .about
-	background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
-	text-align: center
-	&__img
-		margin: 40px 0 10px
-	&__client
-		margin-bottom: 50px
-		width: 870px
-		height: 385px
-		box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
-		border-radius: 6px
-		background-color: #ffffff
-		position: relative
-		&_info
-			padding: 109px 95px 0px
-
-
-
-
-
+    background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
+    text-align: center
+    &__img
+        margin: 40px 0 10px
+    &__client
+        margin-bottom: 50px
+        width: 870px
+        height: 385px
+        box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
+        border-radius: 6px
+        background-color: #ffffff
+        position: relative
+        &_info
+            padding: 109px 95px 0px
 
 .client
-	padding-top: 39px
-	font-weight: 600
-	
-	&_photo
-		width: 128px
-		height: 128px
-		background-color: #74328e
-		border-radius: 50%
-		position: absolute
-		top: -17%
-		left: 50%
-		transform: translateX(-50%)
-	&_name
-		color: #673fbf
-	&_position
-		color: #29384d
+    padding-top: 39px
+    font-weight: 600
+
+    &_photo
+        width: 128px
+        height: 128px
+        background-color: #74328e
+        border-radius: 50%
+        position: absolute
+        top: -17%
+        left: 50%
+        transform: translateX(-50%)
+    &_name
+        color: #673fbf
+    &_position
+        color: #29384d
 
 .quotes
-	position: relative
-	top: 35px
-	left: -55%
+    position: relative
+    top: 35px
+    left: -55%
 
 /* --- section services --- */
 
 .services
-	background: linear-gradient(15deg, #3c334c 25%, #383047 25%, #383047 63%, #3c334c 63%)
-	text-align: center
-	&__item
-		display: inline-block
-		vertical-align: top
-		text-align: left
-		margin: 90px 30px
-		width: 370px
-		height: 332px
-		box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
-		border-radius: 5px
-		background-color: #ffffff
-		position: relative
-		&_icon
-			position: absolute
-			top: -17%
-			left: 30%
-			transform: translateX(-50%)
-			width: 109px
-			height: 109px
-			border-radius: 50%
-			background-color: #673fbf
-			text-align: center
-			padding-top: 38px
-		&_heading
-			padding: 87px 155px 0 41px
-			color: #29384d
-			font-size: 24px
-			font-weight: 600
-			line-height: 36px
-		&_text
-			padding: 20px 54px 40px 40px
-			color: #606f85
-			font-weight: 300
-			line-height: 32px
+    background: linear-gradient(15deg, #3c334c 25%, #383047 25%, #383047 63%, #3c334c 63%)
+    text-align: center
+    &__item
+        display: inline-block
+        vertical-align: top
+        text-align: left
+        margin: 90px 30px
+        width: 370px
+        height: 332px
+        box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
+        border-radius: 5px
+        background-color: #ffffff
+        position: relative
+        &_icon
+            position: absolute
+            top: -17%
+            left: 30%
+            transform: translateX(-50%)
+            width: 109px
+            height: 109px
+            border-radius: 50%
+            background-color: #673fbf
+            text-align: center
+            padding-top: 38px
+        &_heading
+            padding: 87px 155px 0 41px
+            color: #29384d
+            font-size: 24px
+            font-weight: 600
+            line-height: 36px
+        &_text
+            padding: 20px 54px 40px 40px
+            color: #606f85
+            font-weight: 300
+            line-height: 32px
 
 /* --- section portfolio --- */
 
-.portfolio 
-	background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
-	&-box
-		position: relative
-		margin-top: 40px
-	&__item
-		display: block !important
-		position: relative
-		text-align: left
-		margin: 0 auto
-		overflow: hidden
-		width: 1170px !important
-		height: 587px
-		box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
-		border-radius: 5px
-		background-color: #ffffff
-		vertical-align: top
-		&-info
-			display: inline-block
-			width: 50%
-			vertical-align: top
-			padding: 64px 44px 10px
-			&_icon
-				width: 77px
-				height: 77px
-				background-color: #188afd
-				border-radius: 50%
-				padding-top: 20px
-				padding-left: 24px
-			&_heading
-				color: #29384d
-				font-size: 24px
-				font-weight: 600
-				line-height: 36px
-				padding: 30px 0 
-			&_text
-				text-align: left
-				padding-bottom: 28px
-			&_skills
-				display: block
-				float: left
-				color: #29384d
-		&-img
-			display: inline-block
-			float: left
-			width: 50%
+.portfolio
+    background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
+    &-box
+        position: relative
+        margin-top: 40px
+    &__item
+        display: block !important
+        position: relative
+        text-align: left
+        margin: 0 auto
+        overflow: hidden
+        width: 1170px !important
+        height: 587px
+        box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
+        border-radius: 5px
+        background-color: #ffffff
+        vertical-align: top
+        &-info
+            display: inline-block
+            width: 50%
+            vertical-align: top
+            padding: 64px 44px 10px
+            &_icon
+                width: 77px
+                height: 77px
+                background-color: #188afd
+                border-radius: 50%
+                padding-top: 20px
+                padding-left: 24px
+            &_heading
+                color: #29384d
+                font-size: 24px
+                font-weight: 600
+                line-height: 36px
+                padding: 30px 0
+            &_text
+                text-align: left
+                padding-bottom: 28px
+            &_skills
+                display: block
+                float: left
+                color: #29384d
+        &-img
+            display: inline-block
+            float: left
+            width: 50%
 
 .portfolio-slider__buttons
-	position: absolute
-	bottom: 20px
-	right: 42.8%
-	.slick-prev,.slick-next
-		margin: 0 5px
+    position: absolute
+    bottom: 20px
+    right: 42.8%
+    .slick-prev, .slick-next
+        margin: 0 5px
 
 .skills
-	float: left
-	margin-right: 10px
-	padding: 5px 13px 5px 14px
-	border-radius: 10px
-	border: 1px solid #606f85
-	color: #29384d
-	font-size: 11px
-	font-weight: 600
-	text-transform: uppercase
+    float: left
+    margin-right: 10px
+    padding: 5px 13px 5px 14px
+    border-radius: 10px
+    border: 1px solid #606f85
+    color: #29384d
+    font-size: 11px
+    font-weight: 600
+    text-transform: uppercase
 
 /* --- section contact --- */
 
 .contact
-	background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%)
-	text-align: center
+    background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%)
+    text-align: center
 
 .form-field
-	position: relative
-	margin: 20px
-	&__icon
-		position: absolute
-		top: 24px
-		left: 20px
-
-// @import url(./media.css)
+    position: relative
+    margin: 20px
+    &__icon
+        position: absolute
+        top: 24px
+        left: 20px
 
 .form-control
-	width: 100%
-	height: 64px
-	padding: 11px 30px 10px 50px
-	color: #ffffff
-	font-family: Poppins
-	font-size: 17px
-	font-weight: 300
-	border-radius: 5px
-	border: 2px solid rgba(255, 255, 255, 0.25)
-	background-color: transparent
-	&_texted
-		min-height: 125px
-		padding-top: 17px
-		resize: none
-
-
-
-// @import url(./media.css)
+    width: 100%
+    height: 64px
+    padding: 11px 30px 10px 50px
+    color: #ffffff
+    font-family: Poppins
+    font-size: 17px
+    font-weight: 300
+    border-radius: 5px
+    border: 2px solid rgba(255, 255, 255, 0.25)
+    background-color: transparent
+    &_texted
+        min-height: 125px
+        padding-top: 17px
+        resize: none
