@@ -1,0 +1,9 @@
+/* --- @media --- */
+/*  --- Extra large devices (large desktops, 1200px and up) --- */
+@media screen and (min-width: 1200px) and (max-width: 1680px) {
+  .container {
+    width: 1200px; } }
+
+/*  --- Large devices (desktops, 992px and up) --- */
+/*  --- Medium devices (tablets, 768px and up) --- */
+/*  --- Small devices (landscape phones, 576px and up) --- */

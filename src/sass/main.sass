@@ -1,3 +1,6 @@
+@import url(./normalize.css)
+@import url(../libs/slick-carousel/slick/slick.css)
+@import url(./media.css)
 *
     box-sizing: border-box
 
@@ -23,12 +26,13 @@ textarea::placeholder
 /* --- container width&style --- */
 
 .container
-	max-width: 1680px
+	// max-width: 100%
+	// max-width: 1680px
 	padding: 140px 20px 140px
 	margin: 0 auto
 	&--nav
+		max-width: 1920px
 		padding: 0 20px
-		width: 1920px
 		&:after
 			content: ""
 			display: table
@@ -38,7 +42,7 @@ textarea::placeholder
 	&--about
 		width: 910px
 	&--services
-		width: 1920px
+		width: 1680px
 	&--contact
 		width: 910px
 
@@ -142,7 +146,6 @@ textarea::placeholder
 			left: -20px
 			bottom: -20px
 			background-color: rgba(255, 255, 255, 0.25)
-			// border: 27px solid rgba(255, 255, 255, 0.25)
 			border-radius: 73px
 			transition: all 1s
 		&:before
@@ -153,11 +156,9 @@ textarea::placeholder
 			left: -20px
 			bottom: -20px
 			background-color: rgba(255, 255, 255, 0.25)
-			// border: 27px solid rgba(255, 255, 255, 0.25)
 			border-radius: 73px
 			opacity: 0
 			transition: all 1s
-			// background-color: rgba(255, 255, 255, 0.25)
 	&--about
 		background-color: #673fbf
 		box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
@@ -181,7 +182,6 @@ textarea::placeholder
 
 /* --- pulse button --- */
 
-.btn--banner:hover::before,
 .btn--banner:hover::after
 	content: ''
 	position: absolute
@@ -190,28 +190,74 @@ textarea::placeholder
 	top: -20px
 	bottom: -20px
 	background-color: rgba(255, 255, 255, 0.25)
-	// border: 27px solid rgba(255, 255, 255, 0.25)
 	border-radius: 73px
 	opacity: 1
-	animation: btn--banner 3s linear infinite
+	animation: btn--banner 1s linear infinite
+
+.btn--banner:hover::before
+	opacity: 1
 
 .btn--banner:hover::before 
-	// animation-delay: 0.5s
-	animation-direction: reverse
+	animation-delay: 0.5s
 
 @keyframes btn--banner
 	0% 
-		transform: scale(0.5);
-		opacity: 0;
+		transform: scale(0.5)
+		opacity: 0
  
 	50% 
-		opacity: 0.7;
+		opacity: 0.7
  
 	100% 
-		transform: scale(1.2);
-		opacity: 0;
+		transform: scale(1.2)
+		opacity: 0
  
 /* --- pulse button end --- */
+
+/* --- slick slider --- */
+
+.slick
+	&-active
+		opacity: 1
+	&-slide
+		opacity: 0.3
+	&-list
+		overflow: visible
+	&-prev,&-next
+		position: relative
+		top: -35px
+		margin: 10px 70px
+		padding: 7px 0
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		background-color: transparent
+		border: 1px solid rgba(99, 111, 133, 0.25)
+
+.slick-dots li
+	position: relative
+	display: inline-block
+	margin: 0 5px
+
+.slick-dots li button
+	color: transparent
+	border: 0
+	background: transparent
+
+.slick-dots li button:before
+	position: absolute
+	top: 7px
+	left: 7px
+	content: ''
+	width: 6px
+	height: 6px
+	background-color: #606f85
+	opacity: 0.25
+
+.slick-dots li.slick-active button:before
+	opacity: .75
+
+/* --- slick dots end --- */
 
 /* --- title & text style --- */
 
@@ -283,46 +329,7 @@ textarea::placeholder
 			padding: 109px 95px 0px
 
 
-.slick
-	&-active
-		opacity: 1
-	&-slide
-		opacity: 0.3
-	&-list
-		overflow: visible
-	&-prev,&-next
-		position: relative
-		top: -35px
-		margin: 10px 70px
-		padding: 7px 0
-		width: 32px
-		height: 32px
-		border-radius: 50%
-		background-color: transparent
-		border: 1px solid rgba(99, 111, 133, 0.25)
 
-.slick-dots li
-	position: relative;
-	display: inline-block;
-	margin: 0 5px;
-
-.slick-dots li button
-	color: transparent;
-	border: 0;
-	background: transparent;
-
-.slick-dots li button:before
-	position: absolute;
-	top: 7px;
-	left: 7px;
-	content: '';
-	width: 6px
-	height: 6px
-	background-color: #606f85
-	opacity: 0.25
-
-.slick-dots li.slick-active button:before
-	opacity: .75;
 
 
 
@@ -417,9 +424,8 @@ textarea::placeholder
 				height: 77px
 				background-color: #188afd
 				border-radius: 50%
-				// text-align: center
 				padding-top: 20px
-				padding-left: 24px;
+				padding-left: 24px
 			&_heading
 				color: #29384d
 				font-size: 24px
@@ -441,7 +447,6 @@ textarea::placeholder
 .portfolio-slider__buttons
 	position: absolute
 	bottom: 20px
-	// right: 700px
 	right: 42.8%
 	.slick-prev,.slick-next
 		margin: 0 5px
@@ -471,6 +476,8 @@ textarea::placeholder
 		top: 24px
 		left: 20px
 
+// @import url(./media.css)
+
 .form-control
 	width: 100%
 	height: 64px
@@ -487,3 +494,6 @@ textarea::placeholder
 		padding-top: 17px
 		resize: none
 
+
+
+// @import url(./media.css)
