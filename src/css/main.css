@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i");
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
 @import url(./normalize.css);
 @import url(../libs/slick-carousel/slick/slick.css);
-@import url(./media.css);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -47,15 +48,16 @@ textarea::placeholder {
   background: -webkit-gradient(linear, left top, left bottom, from(#bc52a8), to(#7442bc));
   background: -webkit-linear-gradient(top, #bc52a8, #7442bc);
   background: -o-linear-gradient(top, #bc52a8, #7442bc);
-  background: linear-gradient(to bottom, #bc52a8, #7442bc); }
+  background: linear-gradient(to bottom, #bc52a8, #7442bc);
+  height: 100vh; }
 
 /* --- container width&style --- */
 .container {
   padding: 140px 20px 140px;
   margin: 0 auto; }
   .container--nav {
-    max-width: 1920px;
-    padding: 0 20px; }
+    width: 1920px;
+    padding: 0 50px; }
     .container--nav:after {
       content: "";
       display: table;
@@ -67,12 +69,13 @@ textarea::placeholder {
   .container--services {
     width: 1680px; }
   .container--contact {
-    width: 910px; }
+    width: 910px;
+    height: 100vh; }
 
 /* --- navigation --- */
 .nav {
   width: 100%;
-  line-height: 152px; }
+  line-height: 100px; }
 
 .nav-menu {
   float: left; }
@@ -89,9 +92,8 @@ textarea::placeholder {
     -o-transition: 0.5s;
     transition: 0.5s; }
     .nav-menu__link:hover {
-      font-size: 17px;
-      color: #b951a9;
-      background-color: #fff;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.3);
       -webkit-border-radius: 6px;
               border-radius: 6px; }
 
@@ -119,16 +121,16 @@ textarea::placeholder {
     display: block;
     color: #ffffff;
     font-size: 76px;
-    line-height: 90px;
-    margin: 31px 0 22px; }
+    line-height: 110px;
+    margin: 80px 0 60px; }
   .banner-descr {
     display: block;
     color: #ffffff;
     font-size: 24px;
     font-weight: 300;
-    line-height: 42px;
+    line-height: 50px;
     padding: 0 65px;
-    margin-bottom: 58px; }
+    margin-bottom: 110px; }
 
 /* --- buttons style --- */
 .btn {
@@ -150,8 +152,7 @@ textarea::placeholder {
     -o-transition: 0.5s;
     transition: 0.5s; }
     .btn--nav:hover {
-      color: #b951a9;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.3);
       font-size: 17px; }
   .btn--banner {
     background-color: #ffffff;
@@ -210,7 +211,7 @@ textarea::placeholder {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 60px 0 100px; }
+    margin: 80px 0 100px; }
 
 /* --- pulse button --- */
 .btn--banner:hover::after {
@@ -460,7 +461,6 @@ textarea::placeholder {
     margin-top: 40px; }
   .portfolio__item {
     display: block !important;
-    position: relative;
     text-align: left;
     margin: 0 auto;
     overflow: hidden;
@@ -501,7 +501,8 @@ textarea::placeholder {
     .portfolio__item-img {
       display: inline-block;
       float: left;
-      width: 50%; }
+      width: 50%;
+      overflow: hidden; }
 
 .portfolio-slider__buttons {
   position: absolute;
