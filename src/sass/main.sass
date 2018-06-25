@@ -20,10 +20,13 @@ textarea::placeholder
     color: #fff
 
 /* --- header --- */
+.block-position
+    height: 100vh
+    min-height: 600px
 
 .header
     background: linear-gradient(to bottom, #bc52a8, #7442bc)
-    height: 100vh
+
 
 /* --- container width&style --- */
 
@@ -33,26 +36,28 @@ textarea::placeholder
     &--nav
         // max-width to width
         width: 1920px
-        padding: 0 50px;
+        height: 15%
+        padding: 0 50px
         &:after
             content: ""
             display: table
             clear: both
     &--banner
         width: 1080px
+        height: 85%
+        padding: 0 20px
     &--about
         width: 910px
     &--services
         width: 1680px
     &--contact
         width: 910px
-        height: 100vh
+        padding: 0 20px
 
 /* --- navigation --- */
 
 .nav
     width: 100%
-    // 152 to 100 without reason :)
     line-height: 100px
 
 .nav-menu
@@ -89,6 +94,12 @@ textarea::placeholder
  
 .banner
     text-align: center
+    //min-height: 500px
+    &::before
+        content: ''
+        display: inline-block
+        height: 100%
+        vertical-align: middle
     &-head
         opacity: 0.5
         color: #ffffff
@@ -98,8 +109,8 @@ textarea::placeholder
         display: block
         color: #ffffff
         font-size: 76px
-        line-height: 110px
-        margin: 80px 0 60px
+        line-height: 120%
+        margin: 5% 0 5%
     &-descr
         display: block
         color: #ffffff
@@ -107,7 +118,6 @@ textarea::placeholder
         font-weight: 300
         line-height: 50px
         padding: 0 65px
-        margin-bottom: 110px
 
 /* --- buttons style --- */
 
@@ -128,13 +138,14 @@ textarea::placeholder
         &:hover
             //color: #b951a9
             background-color: rgba(255, 255, 255, 0.3)
-            font-size: 17px
+            font-size: 14px
     &--banner
         background-color: #ffffff
         text-decoration: none
         color: #673fbf
         font-size: 24px
         font-weight: 600
+        margin-top: 5%
         padding: 43px 64px 43px 64px
         text-transform: uppercase
         transition: all 1s
@@ -172,13 +183,13 @@ textarea::placeholder
 
     &--contact
         background-color: #ffffff
-        color: #673fbf;
+        color: #673fbf
         padding: 41px 63px
         font-size: 24px
         font-weight: 600
         text-transform: uppercase
         text-decoration: none
-        margin: 80px 0 100px
+        margin: 1% 0 2%
 
 /* --- pulse button --- */
 
@@ -295,6 +306,7 @@ textarea::placeholder
             background-color: #fff
     &--contact
         margin: 0 50px
+        padding-top: 4%
         color: #ffffff
         &:after
             background-color: #fff
