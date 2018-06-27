@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+    $('.nav-toggle').click(function(){
+        $(this).toggleClass('active');
+        $('.nav-menu').slideToggle(400);
+    });
+
     $('.about-slider').slick({
         swipeToSlide: true,
         slidesToShow: 1,

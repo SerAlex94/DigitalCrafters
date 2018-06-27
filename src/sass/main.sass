@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i")
 @import url("https://fonts.googleapis.com/css?family=Oswald:700")
-@import url(./normalize.css)
+@import url(../css/normalize.css)
 @import url(../libs/slick-carousel/slick/slick.css)
+@import url(../libs/slick-carousel/slick/slick-theme.css)
 
 *
     box-sizing: border-box
@@ -13,11 +14,15 @@ body
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-input::placeholder
-    color: #fff
+input,textarea
+    outline: none
+    &::placeholder
+        color: #fff
 
-textarea::placeholder
-    color: #fff
+
+//textarea
+//&::placeholder
+//    color: #fff
 
 /* --- header --- */
 .header
@@ -62,23 +67,26 @@ textarea::placeholder
     top: 0
     left: 0
 
-.nav-menu
-    float: left
-    &__item
-        display: inline
-        font-weight: 600
-    &__link
-        text-decoration: none
-        color: #ffffff
-        font-size: 14px
-        text-transform: uppercase
-        padding: 0 12px
-        transition: 0.5s
-        &:hover
+.nav
+    &-toggle
+        display: none
+    &-menu
+        float: left
+        &__item
+            display: inline
+            font-weight: 600
+        &__link
+            text-decoration: none
+            color: #ffffff
             font-size: 14px
-            //color: #b951a9
-            background-color: rgba(255, 255, 255, 0.3)
-            border-radius: 6px
+            text-transform: uppercase
+            padding: 0 12px
+            transition: 0.5s
+            &:hover
+                font-size: 14px
+                //color: #b951a9
+                background-color: rgba(255, 255, 255, 0.3)
+                border-radius: 6px
 
 .nav-logo
     width: 200px
@@ -107,6 +115,8 @@ textarea::placeholder
     //    vertical-align: middle
     &-head
         opacity: 0.5
+        width: 650px
+        margin: 0 auto
         color: #ffffff
         font-size: 24px
         text-transform: uppercase
@@ -233,35 +243,41 @@ textarea::placeholder
 /* --- slick slider --- */
 
 .slick
-	&-active
+	//&-active
 		opacity: 1
-	&-slide
+	//&-slide
 		opacity: 0.3
 	&-list
 		overflow: visible
-	&-prev,&-next
-		position: relative
-		outline: none
-		top: -35px
-		margin: 10px 70px
-		padding: 7px 0
-		width: 32px
-		height: 32px
-		border-radius: 50%
-		background-color: transparent
-		border: 1px solid rgba(99, 111, 133, 0.25)
+	&-prev, &-next
+        display: inline-block
+        position: relative
+        outline: none
+        top: -16px
+        left: 0
+        right: 0
+        margin: 0px 60px
+        padding: 7px 0
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        background-color: transparent
+        border: 1px solid rgba(99, 111, 133, 0.25)
 
-.slick-dots li
+.slick-prev:before,.slick-next:before
+    display: none
+
+//.slick-dots li
     position: relative
     display: inline-block
     margin: 0 5px
 
-.slick-dots li button
+//.slick-dots li button
     color: transparent
     border: 0
     background: transparent
 
-.slick-dots li button:before
+//.slick-dots li button:before
     position: absolute
     top: 7px
     left: 7px
@@ -271,7 +287,7 @@ textarea::placeholder
     background-color: #606f85
     opacity: 0.25
 
-.slick-dots li.slick-active button:before
+//.slick-dots li.slick-active button:before
     opacity: .75
 
 /* --- slick dots end --- */
@@ -281,6 +297,7 @@ textarea::placeholder
 .title
     position: relative
     text-align: center
+    width: 100%
     color: #29384d
     font-size: 42px
     font-weight: 600
@@ -310,14 +327,14 @@ textarea::placeholder
         &:after
             background-color: #fff
     &--contact
-        margin: 0 50px
+        //margin: 0 50px
         padding-top: 4%
         color: #ffffff
         &:after
             background-color: #fff
 
 .text
-    padding: 10px 0
+    padding: 10px 30px
     line-height: 32px
     text-align: center
     &-services
@@ -328,29 +345,35 @@ textarea::placeholder
     &-portfolio
         width: 500px
         margin: 0 auto
+    &-client
+        padding: 100px 30px
 
 /* --- section about & about__client --- */
 
 .about
     background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
     text-align: center
-    &__img
+    &_img
         margin: 40px 0 10px
     &__client
-        margin-bottom: 50px
-        width: 870px
-        height: 385px
-        box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
-        border-radius: 6px
-        background-color: #ffffff
         position: relative
-        &_info
-            padding: 109px 95px 0px
+    &-slider__buttons
+        position: relative
+
 
 .client
-    padding-top: 39px
-    font-weight: 600
-
+    display: inline-block
+    margin-bottom: 50px
+    width: 870px
+    height: 385px
+    box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
+    border-radius: 6px
+    background-color: #ffffff
+    position: relative
+    padding: 80px 80px 0
+    &_info
+        padding-top: 39px
+        font-weight: 600
     &_photo
         width: 128px
         height: 128px
@@ -360,10 +383,12 @@ textarea::placeholder
         top: -17%
         left: 50%
         transform: translateX(-50%)
-    &_name
-        color: #673fbf
-    &_position
-        color: #29384d
+    &_info
+
+        &_name
+            color: #673fbf
+        &_position
+            color: #29384d
 
 .quotes
     position: relative
@@ -414,8 +439,10 @@ textarea::placeholder
 .portfolio
     background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
     &-box
+        //display: block
         position: relative
         margin-top: 40px
+        //width: 1170px
     &__item
         display: block !important
         //position: relative
@@ -479,13 +506,24 @@ textarea::placeholder
 
 /* --- section contact --- */
 
-.contact
+.footer
     background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%)
+    display: table
+    width: 100%
+    height: 100vh
+    min-height: 600px
+    position: relative
+
+.contact
+    display: table-cell
+    vertical-align: middle
     text-align: center
+
 
 .form-field
     position: relative
     margin: 20px
+    outline: none
     &__icon
         position: absolute
         top: 24px
@@ -496,7 +534,7 @@ textarea::placeholder
     height: 64px
     padding: 11px 30px 10px 50px
     color: #ffffff
-    font-family: Poppins
+    font-family: "Poppins"
     font-size: 17px
     font-weight: 300
     border-radius: 5px

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:700");
 @import url(./normalize.css);
 @import url(../libs/slick-carousel/slick/slick.css);
+@import url(../libs/slick-carousel/slick/slick-theme.css);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -13,35 +14,18 @@ body {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 17px; }
 
-input::-webkit-input-placeholder {
-  color: #fff; }
-
-input::-moz-placeholder {
-  color: #fff; }
-
-input:-ms-input-placeholder {
-  color: #fff; }
-
-input::-ms-input-placeholder {
-  color: #fff; }
-
-input::placeholder {
-  color: #fff; }
-
-textarea::-webkit-input-placeholder {
-  color: #fff; }
-
-textarea::-moz-placeholder {
-  color: #fff; }
-
-textarea:-ms-input-placeholder {
-  color: #fff; }
-
-textarea::-ms-input-placeholder {
-  color: #fff; }
-
-textarea::placeholder {
-  color: #fff; }
+input, textarea {
+  outline: none; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #fff; }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #fff; }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #fff; }
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: #fff; }
+  input::placeholder, textarea::placeholder {
+    color: #fff; }
 
 /* --- header --- */
 .header {
@@ -85,6 +69,9 @@ textarea::placeholder {
   top: 0;
   left: 0; }
 
+.nav-toggle {
+  display: none; }
+
 .nav-menu {
   float: left; }
   .nav-menu__item {
@@ -125,6 +112,8 @@ textarea::placeholder {
   padding-top: 100px; }
   .banner-head {
     opacity: 0.5;
+    width: 650px;
+    margin: 0 auto;
     color: #ffffff;
     font-size: 24px;
     text-transform: uppercase; }
@@ -272,20 +261,17 @@ textarea::placeholder {
 
 /* --- pulse button end --- */
 /* --- slick slider --- */
-.slick-active {
-  opacity: 1; }
-
-.slick-slide {
-  opacity: 0.3; }
-
 .slick-list {
   overflow: visible; }
 
 .slick-prev, .slick-next {
+  display: inline-block;
   position: relative;
   outline: none;
-  top: -35px;
-  margin: 10px 70px;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: 0px 60px;
   padding: 7px 0;
   width: 32px;
   height: 32px;
@@ -294,34 +280,15 @@ textarea::placeholder {
   background-color: transparent;
   border: 1px solid rgba(99, 111, 133, 0.25); }
 
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px; }
-
-.slick-dots li button {
-  color: transparent;
-  border: 0;
-  background: transparent; }
-
-.slick-dots li button:before {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  content: '';
-  width: 6px;
-  height: 6px;
-  background-color: #606f85;
-  opacity: 0.25; }
-
-.slick-dots li.slick-active button:before {
-  opacity: .75; }
+.slick-prev:before, .slick-next:before {
+  display: none; }
 
 /* --- slick dots end --- */
 /* --- title & text style --- */
 .title {
   position: relative;
   text-align: center;
+  width: 100%;
   color: #29384d;
   font-size: 42px;
   font-weight: 600;
@@ -353,14 +320,13 @@ textarea::placeholder {
     .title--services:after {
       background-color: #fff; }
   .title--contact {
-    margin: 0 50px;
     padding-top: 4%;
     color: #ffffff; }
     .title--contact:after {
       background-color: #fff; }
 
 .text {
-  padding: 10px 0;
+  padding: 10px 30px;
   line-height: 32px;
   text-align: center; }
   .text-services {
@@ -371,6 +337,8 @@ textarea::placeholder {
   .text-portfolio {
     width: 500px;
     margin: 0 auto; }
+  .text-client {
+    paddint: 100px 30px; }
 
 /* --- section about & about__client --- */
 .about {
@@ -378,24 +346,28 @@ textarea::placeholder {
   background-image: -o-linear-gradient(120deg, #eff5fa 0%, #fff 80%, #fff 100%);
   background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%);
   text-align: center; }
-  .about__img {
+  .about_img {
     margin: 40px 0 10px; }
   .about__client {
-    margin-bottom: 50px;
-    width: 870px;
-    height: 385px;
-    -webkit-box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06);
-            box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06);
-    -webkit-border-radius: 6px;
-            border-radius: 6px;
-    background-color: #ffffff;
     position: relative; }
-    .about__client_info {
-      padding: 109px 95px 0px; }
+  .about-slider__buttons {
+    position: relative; }
 
 .client {
-  padding-top: 39px;
-  font-weight: 600; }
+  display: inline-block;
+  margin-bottom: 50px;
+  width: 870px;
+  height: 385px;
+  -webkit-box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06);
+          box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06);
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  background-color: #ffffff;
+  position: relative;
+  padding: 80px 80px 0px; }
+  .client_info {
+    padding-top: 39px;
+    font-weight: 600; }
   .client_photo {
     width: 128px;
     height: 128px;
@@ -408,9 +380,9 @@ textarea::placeholder {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  .client_name {
+  .client_info_name {
     color: #673fbf; }
-  .client_position {
+  .client_info_position {
     color: #29384d; }
 
 .quotes {
@@ -536,16 +508,26 @@ textarea::placeholder {
   text-transform: uppercase; }
 
 /* --- section contact --- */
-.contact {
+.footer {
   background: -webkit-gradient(linear, right bottom, left top, from(#7542bb), color-stop(80%, #c75eb4), to(#c75eb4));
   background: -webkit-linear-gradient(bottom right, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
   background: -o-linear-gradient(bottom right, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
   background: linear-gradient(to top left, #7542bb 0%, #c75eb4 80%, #c75eb4 100%);
+  display: table;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative; }
+
+.contact {
+  display: table-cell;
+  vertical-align: middle;
   text-align: center; }
 
 .form-field {
   position: relative;
-  margin: 20px; }
+  margin: 20px;
+  outline: none; }
   .form-field__icon {
     position: absolute;
     top: 24px;
