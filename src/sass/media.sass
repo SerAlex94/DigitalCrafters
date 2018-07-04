@@ -29,9 +29,14 @@
       font-size: 73px
     &-descr
       font-size: 22px
-
-  .btn--contact
-    //margin: 50px 0 20px
+  .text
+    //padding: 5px 20px
+    line-height: 27px
+    &-client
+      padding: 60px 30px
+  .client
+    &-info
+      padding-top: 0
 
   .portfolio-slider__buttons
     right: 39%
@@ -102,6 +107,8 @@
   .text
     padding: 5px 20px
     line-height: 27px
+    &-client
+      padding: 60px 30px
 
   .title
     font-size: 30px
@@ -171,12 +178,6 @@
       width: 550px
     &--contact
       padding: 0
-    //&--about
-    //  width: 700px
-    //&--services
-    //  width: 700px
-    //&--portfolio
-    //  width: 700px
 
   .header
     min-height: 575px
@@ -281,4 +282,46 @@
 
 
 /*  --- Small devices (landscape phones, 576px and up) --- */
- 
+
+@media screen and (max-width: 576px)
+  .container
+    width: 550px
+
+  .btn--nav
+    padding: 5px 10px
+
+  .client
+    padding: 35px 20px 0px
+    &_info
+      padding-top: 20px
+
+  .text
+    &-client
+      padding: 5px 10px
+    &-services
+      width: 100%
+
+  .quotes
+    top: 22px
+    left: -44%
+
+  .portfolio
+    &__item
+      width: 450px !important
+      height: 250px
+      &-info
+        &_icon
+          display: none
+        &_heading
+          font-size: 15px
+          line-height: 1.24
+          padding: 5px 0
+        &_text
+          padding: 5px 0px
+    &-slider
+      &__buttons
+        right: 31%
+        bottom: -15px
+
+  .skills
+    padding: 5px

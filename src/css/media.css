@@ -21,6 +21,12 @@
     font-size: 73px; }
   .banner-descr {
     font-size: 22px; }
+  .text {
+    line-height: 27px; }
+    .text-client {
+      padding: 60px 30px; }
+  .client-info {
+    padding-top: 0; }
   .portfolio-slider__buttons {
     right: 39%; } }
 
@@ -84,6 +90,8 @@
   .text {
     padding: 5px 20px;
     line-height: 27px; }
+    .text-client {
+      padding: 60px 30px; }
   .title {
     font-size: 30px;
     font-weight: 400;
@@ -233,3 +241,35 @@
     line-height: 1.24; } }
 
 /*  --- Small devices (landscape phones, 576px and up) --- */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 550px; }
+  .btn--nav {
+    padding: 5px 10px; }
+  .client {
+    padding: 35px 20px 0px; }
+    .client_info {
+      padding-top: 20px; }
+  .text-client {
+    padding: 5px 10px; }
+  .text-services {
+    width: 100%; }
+  .quotes {
+    top: 22px;
+    left: -44%; }
+  .portfolio__item {
+    width: 450px !important;
+    height: 250px; }
+    .portfolio__item-info_icon {
+      display: none; }
+    .portfolio__item-info_heading {
+      font-size: 15px;
+      line-height: 1.24;
+      padding: 5px 0; }
+    .portfolio__item-info_text {
+      padding: 5px 0px; }
+  .portfolio-slider__buttons {
+    right: 31%;
+    bottom: -15px; }
+  .skills {
+    padding: 5px; } }

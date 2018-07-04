@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i");
 @import url("https://fonts.googleapis.com/css?family=Oswald:700");
-@import url(./normalize.css);
+@import url(../css/normalize.css);
 @import url(../libs/slick-carousel/slick/slick.css);
 @import url(../libs/slick-carousel/slick/slick-theme.css);
 * {
@@ -338,7 +338,7 @@ input, textarea {
     width: 500px;
     margin: 0 auto; }
   .text-client {
-    paddint: 100px 30px; }
+    padding: 100px 30px; }
 
 /* --- section about & about__client --- */
 .about {
@@ -364,7 +364,7 @@ input, textarea {
           border-radius: 6px;
   background-color: #ffffff;
   position: relative;
-  padding: 80px 80px 0px; }
+  padding: 80px 80px 0; }
   .client_info {
     padding-top: 39px;
     font-weight: 600; }
@@ -477,7 +477,8 @@ input, textarea {
         padding: 30px 0; }
       .portfolio__item-info_text {
         text-align: left;
-        padding-bottom: 28px; }
+        padding-bottom: 28px;
+        padding-left: 0; }
       .portfolio__item-info_skills {
         display: block;
         float: left;
@@ -538,7 +539,7 @@ input, textarea {
   height: 64px;
   padding: 11px 30px 10px 50px;
   color: #ffffff;
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 17px;
   font-weight: 300;
   -webkit-border-radius: 5px;
