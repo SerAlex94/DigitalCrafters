@@ -243,7 +243,7 @@
 /*  --- Small devices (landscape phones, 576px and up) --- */
 @media screen and (max-width: 576px) {
   .container {
-    width: 550px; }
+    width: 90%; }
   .btn--nav {
     padding: 5px 10px; }
   .client {

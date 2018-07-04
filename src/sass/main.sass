@@ -17,7 +17,7 @@ body
 input,textarea
     outline: none
     &::placeholder
-        color: #fff
+        color: #fff !important
 
 
 //textarea
@@ -67,26 +67,25 @@ input,textarea
     top: 0
     left: 0
 
-.nav
-    &-toggle
-        display: none
-    &-menu
-        float: left
-        &__item
-            display: inline
-            font-weight: 600
-        &__link
-            text-decoration: none
-            color: #ffffff
+.nav-toggle
+    display: none
+
+.nav-menu
+    float: left
+    &__item
+        display: inline
+        font-weight: 600
+    &__link
+        text-decoration: none
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        padding: 0 12px
+        transition: 0.5s
+        &:hover
             font-size: 14px
-            text-transform: uppercase
-            padding: 0 12px
-            transition: 0.5s
-            &:hover
-                font-size: 14px
-                //color: #b951a9
-                background-color: rgba(255, 255, 255, 0.3)
-                border-radius: 6px
+            background-color: rgba(255, 255, 255, 0.3)
+            border-radius: 6px
 
 .nav-logo
     width: 200px
@@ -113,20 +112,20 @@ input,textarea
     //    display: inline-block
     //    height: 100%
     //    vertical-align: middle
-    &-head
+    &__head
         opacity: 0.5
         width: 650px
         margin: 0 auto
         color: #ffffff
         font-size: 24px
         text-transform: uppercase
-    &-info
+    &__info
         display: block
         color: #ffffff
         font-size: 76px
         line-height: 120%
         margin: 5% 0 5%
-    &-descr
+    &__descr
         display: block
         color: #ffffff
         font-size: 24px
@@ -248,7 +247,7 @@ input,textarea
 	//&-slide
 		opacity: 0.3
 	&-list
-		overflow: visible
+		//overflow: visible
 	&-prev, &-next
         display: inline-block
         position: relative
@@ -337,28 +336,38 @@ input,textarea
     padding: 10px 30px
     line-height: 32px
     text-align: center
-    &-services
+    &--services
         width: 540px
         margin: 0 auto
         color: #fff
         font-weight: 300
-    &-portfolio
+    &--portfolio
         width: 500px
         margin: 0 auto
-    &-client
-        padding: 100px 30px
+    &--portfolio-slider
+        text-align: left
+        padding: 20px 0 40px
+        color: #606f85
+        font-weight: 300
+        line-height: 32px
 
 /* --- section about & about__client --- */
 
 .about
     background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
     text-align: center
-    &_img
-        margin: 40px 0 10px
-    &__client
-        position: relative
+
     &-slider__buttons
         position: relative
+
+.about-client
+    position: relative
+    &__img
+        margin: 40px 0 10px
+    &__quotes
+        position: absolute
+        top: -100px
+        left: -100px
 
 
 .client
@@ -371,10 +380,14 @@ input,textarea
     background-color: #ffffff
     position: relative
     padding: 80px 80px 0
-    &_info
+    &__info
         padding-top: 39px
         font-weight: 600
-    &_photo
+        &-name
+            color: #673fbf
+        &-position
+            color: #29384d
+    &__photo
         width: 128px
         height: 128px
         background-color: #74328e
@@ -383,67 +396,55 @@ input,textarea
         top: -17%
         left: 50%
         transform: translateX(-50%)
-    &_info
 
-        &_name
-            color: #673fbf
-        &_position
-            color: #29384d
-
-.quotes
-    position: relative
-    top: 35px
-    left: -55%
 
 /* --- section services --- */
 
 .services
     background: linear-gradient(15deg, #3c334c 25%, #383047 25%, #383047 63%, #3c334c 63%)
     text-align: center
-    &__item
-        display: inline-block
-        vertical-align: top
-        text-align: left
-        margin: 90px 30px
-        width: 370px
-        height: 332px
-        box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
-        border-radius: 5px
-        background-color: #ffffff
-        position: relative
-        &_icon
-            position: absolute
-            top: -17%
-            left: 30%
-            transform: translateX(-50%)
-            width: 109px
-            height: 109px
-            border-radius: 50%
-            background-color: #673fbf
-            text-align: center
-            padding-top: 38px
-        &_heading
-            padding: 87px 155px 0 41px
-            color: #29384d
-            font-size: 24px
-            font-weight: 600
-            line-height: 36px
-        &_text
-            padding: 20px 54px 40px 40px
-            color: #606f85
-            font-weight: 300
-            line-height: 32px
+
+.services-item
+    display: inline-block
+    vertical-align: top
+    text-align: left
+    margin: 90px 30px
+    width: 370px
+    height: 332px
+    box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
+    border-radius: 5px
+    background-color: #ffffff
+    position: relative
+    &__icon-wrapper
+        position: absolute
+        top: -17%
+        left: 30%
+        transform: translateX(-50%)
+        width: 109px
+        height: 109px
+        border-radius: 50%
+        background-color: #673fbf
+        text-align: center
+        padding-top: 38px
+    &__heading
+        padding: 87px 155px 0 41px
+        color: #29384d
+        font-size: 24px
+        font-weight: 600
+        line-height: 36px
 
 /* --- section portfolio --- */
 
 .portfolio
     background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
-    &-box
-        //display: block
-        position: relative
-        margin-top: 40px
-        //width: 1170px
-    &__item
+
+.portfolio-slider-wrapper
+    //display: block
+    position: relative
+    margin-top: 40px
+    //width: 1170px
+
+.portfolio-slider-item
         display: block !important
         //position: relative
         text-align: left
@@ -455,42 +456,42 @@ input,textarea
         border-radius: 5px
         background-color: #ffffff
         vertical-align: top
-        &-info
+        &__info
             display: inline-block
             width: 50%
             vertical-align: top
             padding: 64px 44px 10px
-            &_icon
-                width: 77px
-                height: 77px
-                background-color: #188afd
-                border-radius: 50%
-                padding-top: 20px
-                padding-left: 24px
-            &_heading
-                color: #29384d
-                font-size: 24px
-                font-weight: 600
-                line-height: 36px
-                padding: 30px 0
-            &_text
-                text-align: left
-                padding-bottom: 28px
-                padding-left: 0
-            &_skills
-                display: block
-                float: left
-                color: #29384d
-        &-img
+        &__icon
+            width: 77px
+            height: 77px
+            background-color: #188afd
+            border-radius: 50%
+            padding-top: 20px
+            padding-left: 24px
+        &__heading
+            color: #29384d
+            font-size: 24px
+            font-weight: 600
+            line-height: 36px
+            padding: 30px 0
+        &__text
+            text-align: left
+            padding-bottom: 28px
+            padding-left: 0
+        &__skills
+            display: block
+            float: left
+            color: #29384d
+        &__img
             display: inline-block
             float: left
             width: 50%
             overflow: hidden
 
-.portfolio-slider__buttons
-    position: absolute
-    bottom: 20px
-    right: 42.8%
+.portfolio-slider-buttons
+    //right: 42.8%
+    ////position: absolute
+    //bottom: 20px
     .slick-prev, .slick-next
         margin: 0 5px
 
@@ -525,23 +526,24 @@ input,textarea
     position: relative
     margin: 20px
     outline: none
-    &__icon
+    &__label
         position: absolute
         top: 24px
         left: 20px
-
-.form-control
-    width: 100%
-    height: 64px
-    padding: 11px 30px 10px 50px
-    color: #ffffff
-    font-family: "Poppins"
-    font-size: 17px
-    font-weight: 300
-    border-radius: 5px
-    border: 2px solid rgba(255, 255, 255, 0.25)
-    background-color: transparent
-    &_texted
-        min-height: 125px
-        padding-top: 17px
-        resize: none
+    &__input
+        width: 100%
+        height: 64px
+        padding: 11px 30px 10px 50px
+        color: #ffffff
+        font-family: "Poppins", sans-serif
+        font-size: 17px
+        font-weight: 300
+        border-radius: 5px
+        border: 2px solid rgba(255, 255, 255, 0.25)
+        background-color: transparent
+        &--textarea
+            min-height: 125px
+            padding-top: 17px
+            resize: none
+            &::placeholder
+                color: red

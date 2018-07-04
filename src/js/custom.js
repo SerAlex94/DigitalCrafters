@@ -5,16 +5,16 @@ $(document).ready(function() {
         $('.nav-menu').slideToggle(400);
     });
 
-    $('.about-slider').slick({
+    $('.about-client__slider').slick({
         swipeToSlide: true,
         slidesToShow: 1,
         arrows: true,
         fade: true,
         dots: true,
-        appendArrows: '.about-slider__buttons',
+        appendArrows: '.about-client__slider-buttons',
+        dotsClass: 'slick-dots',
         prevArrow: '<button type="button" class="slick-prev"><img src="./img/left.png" alt="<" /></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="./img/right.png" alt=">" /></button>',
-        dotsClass: 'slick-dots',
     });
 
     $('.portfolio-slider').slick({
@@ -23,8 +23,10 @@ $(document).ready(function() {
         arrows: true,
         fade: true,
         dots: false,
-        appendArrows: '.portfolio-slider__buttons',
+        appendArrows: '.portfolio-slider-buttons',
         prevArrow: '<button type="button" class="slick-prev"><img src="./img/left.png" alt="<" /></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="./img/right.png" alt=">" /></button>',
     });
 });
+
+var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
