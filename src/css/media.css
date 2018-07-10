@@ -9,26 +9,29 @@
     width: 1200px; }
     .container--nav {
       padding: 0 30px; }
+    .container--about {
+      width: 910px; }
   .nav-menu__item {
     font-weight: 400; }
   .nav-menu__link {
     padding: 0 6px; }
   .btn--nav {
     padding: 18px 35px; }
-  .banner-head {
+  .banner__head {
     font-size: 22px; }
-  .banner-info {
+  .banner__info {
     font-size: 73px; }
-  .banner-descr {
+  .banner__descr {
     font-size: 22px; }
   .text {
     line-height: 27px; }
     .text-client {
       padding: 60px 30px; }
-  .client-info {
-    padding-top: 0; }
-  .portfolio-slider__buttons {
-    right: 39%; } }
+  .client__info {
+    padding-top: 10px; }
+  .portfolio-slider-item {
+    width: 1000px !important;
+    height: 500px; } }
 
 /*  --- Large devices (desktops, 992px and up) --- */
 @media screen and (max-width: 1200px) {
@@ -39,6 +42,8 @@
       padding: 0 10px; }
     .container--banner {
       padding: 5% 20px; }
+    .container--about {
+      width: 800px; }
   .nav {
     line-height: 80px;
     top: 35px; }
@@ -77,21 +82,21 @@
     font-weight: 400; }
   .banner {
     padding-top: 0; }
-    .banner-head {
+    .banner__head {
       font-size: 15px; }
-    .banner-info {
+    .banner__info {
       font-size: 40px;
       line-height: 120%;
       margin: 5% 0 5%; }
-    .banner-descr {
+    .banner__descr {
       font-size: 15px;
       font-weight: 300;
       line-height: 30px; }
   .text {
     padding: 5px 20px;
-    line-height: 27px; }
-    .text-client {
-      padding: 60px 30px; }
+    line-height: 16px; }
+    .text--portfolio-slider {
+      padding: 15px 0px; }
   .title {
     font-size: 30px;
     font-weight: 400;
@@ -103,37 +108,30 @@
       width: 50px;
       height: 3px;
       margin: 25px auto; }
-  .about_img {
+  .about-company__img {
     width: 80%; }
   .client {
-    width: 80% !important;
+    width: 95% !important;
     padding: 70px 60px 0px; }
-    .client_photo {
+    .client__photo {
       width: 100px;
       height: 100px;
       top: -14%; }
-  .quotes {
-    left: -43%; }
-    .quotes_img {
-      width: 14%; }
-  .portfolio__item {
+  .services-item {
+    width: 370px;
+    height: 332px; }
+  .portfolio-slider-item {
     width: 800px !important;
     height: 400px; }
-    .portfolio__item-info {
-      padding: 34px 24px 10px; }
-      .portfolio__item-info_icon {
-        width: 47px;
-        height: 47px;
-        padding-top: 6px;
-        padding-left: 10px; }
-      .portfolio__item-info_heading {
-        font-size: 18px;
-        line-height: 16px;
-        padding: 15px 0; }
-      .portfolio__item-info_text {
-        padding: 5px 0px; }
-  .portfolio-slider__buttons {
-    right: 38%; }
+    .portfolio-slider-item__icon {
+      width: 47px;
+      height: 47px;
+      padding-top: 6px;
+      padding-left: 10px; }
+    .portfolio-slider-item__heading {
+      font-size: 18px;
+      line-height: 16px;
+      padding: 15px 0; }
   .skills {
     font-size: 10px; }
   .form-control {
@@ -196,49 +194,41 @@
     font-size: 12px; }
   .btn--banner {
     font-size: 12px; }
-  .banner-head {
+  .banner__head {
     width: 450px;
     font-size: 12px; }
-  .banner-info {
+  .banner__info {
     font-size: 30px;
     line-height: 120%;
     margin: 5% 0 5%; }
-  .banner-descr {
+  .banner__descr {
     font-size: 12px;
     font-weight: 300;
     line-height: 20px; }
   .client {
     margin-bottom: 50px;
-    height: 310px;
     padding: 50px 40px 0px; }
-    .client_photo {
+    .client__photo {
       width: 70px;
       height: 70px;
       top: -12%; }
-  .quotes {
-    top: 22px;
-    left: -44%; }
-  .services__item {
+  .services-item {
     margin: 60px 20px; }
-  .portfolio__item {
+  .portfolio-slider-item {
     width: 600px !important;
     height: 300px; }
-    .portfolio__item-info {
+    .portfolio-slider-item__info {
       padding: 14px 24px 10px; }
-      .portfolio__item-info_text {
-        padding: 15px 0px;
-        font-size: 12px;
-        line-height: 1.24; }
-      .portfolio__item-info-heading {
-        font-size: 14px;
-        line-height: 1.24;
-        padding: 5px 0; }
-  .portfolio-slider__buttons {
-    right: 35%;
-    bottom: -5px; }
-  .text-client {
-    padding: 5px 10px;
-    line-height: 1.24; } }
+    .portfolio-slider-item__heading {
+      font-size: 16px;
+      line-height: 1.24;
+      padding: 5px 0; }
+  .text--portfolio-slider {
+    padding: 0px; }
+  .skills {
+    margin-top: 5px; }
+  .portfolio-slider-item__info .portfolio-slider-buttons {
+    bottom: -30px; } }
 
 /*  --- Small devices (landscape phones, 576px and up) --- */
 @media screen and (max-width: 576px) {
@@ -248,28 +238,21 @@
     padding: 5px 10px; }
   .client {
     padding: 35px 20px 0px; }
-    .client_info {
+    .client__info {
       padding-top: 20px; }
-  .text-client {
-    padding: 5px 10px; }
-  .text-services {
+  .text--services {
     width: 100%; }
   .quotes {
     top: 22px;
     left: -44%; }
-  .portfolio__item {
-    width: 450px !important;
+  .portfolio-slider-item {
+    width: 80% !important;
     height: 250px; }
-    .portfolio__item-info_icon {
+    .portfolio-slider-item__info__icon {
       display: none; }
-    .portfolio__item-info_heading {
+    .portfolio-slider-item__info__heading {
       font-size: 15px;
       line-height: 1.24;
       padding: 5px 0; }
-    .portfolio__item-info_text {
-      padding: 5px 0px; }
-  .portfolio-slider__buttons {
-    right: 31%;
-    bottom: -15px; }
   .skills {
     padding: 5px; } }

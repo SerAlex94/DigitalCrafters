@@ -11,10 +11,10 @@ $(document).ready(function() {
         arrows: true,
         fade: true,
         dots: true,
-        appendArrows: '.about-client__slider-buttons',
-        dotsClass: 'slick-dots',
+        appendArrows: ".about-client__slider-controls",
+        appendDots: ".about-client__slider-controls",
         prevArrow: '<button type="button" class="slick-prev"><img src="./img/left.png" alt="<" /></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="./img/right.png" alt=">" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="./img/right.png" alt=">" /></button>'
     });
 
     $('.portfolio-slider').slick({
@@ -24,9 +24,11 @@ $(document).ready(function() {
         fade: true,
         dots: false,
         appendArrows: '.portfolio-slider-buttons',
-        prevArrow: '<button type="button" class="slick-prev"><img src="./img/left.png" alt="<" /></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="./img/right.png" alt=">" /></button>',
+        prevArrow: '<button type="button" class="slider-prev"><img src="./img/left.png" alt="<" /></button>',
+        nextArrow: '<button type="button" class="slider-next"><img src="./img/right.png" alt=">" /></button>'
     });
 });
+
+
 
 var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

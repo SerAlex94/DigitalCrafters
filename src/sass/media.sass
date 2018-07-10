@@ -12,6 +12,8 @@
         width: 1200px
         &--nav
             padding: 0 30px
+        &--about
+          width: 910px
 
     .nav-menu
         &__item
@@ -23,23 +25,24 @@
         padding: 18px 35px
 
     .banner
-        &-head
+        &__head
             font-size: 22px
-        &-info
+        &__info
             font-size: 73px
-        &-descr
+        &__descr
             font-size: 22px
     .text
-        //padding: 5px 20px
         line-height: 27px
         &-client
             padding: 60px 30px
     .client
-        &-info
-            padding-top: 0
+        &__info
+            padding-top: 10px
 
-    .portfolio-slider__buttons
-        right: 39%
+    .portfolio-slider
+        &-item
+            width: 1000px !important
+            height: 500px
 
 /*  --- Large devices (desktops, 992px and up) --- */
 
@@ -51,6 +54,8 @@
             padding: 0 10px
         &--banner
             padding: 5% 20px
+        &--about
+            width: 800px
 
     .nav
         line-height: 80px
@@ -94,20 +99,22 @@
 
     .banner
         padding-top: 0
-        &-head
+        &__head
             font-size: 15px
-        &-info
+        &__info
             font-size: 40px
             line-height: 120%
             margin: 5% 0 5%
-        &-descr
+        &__descr
             font-size: 15px
             font-weight: 300
             line-height: 30px
     .text
         padding: 5px 20px
-        line-height: 27px
-        &-client
+        line-height: 16px
+        &--portfolio-slider
+            padding: 15px 0px
+        //&-client
             padding: 60px 30px
 
     .title
@@ -121,42 +128,35 @@
             width: 50px
             height: 3px
             margin: 25px auto
-    .about
-        &_img
+    .about-company
+        &__img
             width: 80%
 
     .client
-        width: 80% !important
+        width: 95% !important
         padding: 70px 60px 0px
-        &_photo
+        &__photo
             width: 100px
             height: 100px
             top: -14%
 
-    .quotes
-        left: -43%
-        &_img
-            width: 14%
+    .services-item
+        width: 370px
+        height: 332px
 
-    .portfolio
-        &__item
+    .portfolio-slider
+        &-item
             width: 800px !important
             height: 400px
-            &-info
-                padding: 34px 24px 10px
-                &_icon
-                    width: 47px
-                    height: 47px
-                    padding-top: 6px
-                    padding-left: 10px
-                &_heading
-                    font-size: 18px
-                    line-height: 16px
-                    padding: 15px 0
-                &_text
-                    padding: 5px 0px
-        &-slider__buttons
-            right: 38%
+            &__icon
+                width: 47px
+                height: 47px
+                padding-top: 6px
+                padding-left: 10px
+            &__heading
+                font-size: 18px
+                line-height: 16px
+                padding: 15px 0
 
     .skills
         font-size: 10px
@@ -227,59 +227,50 @@
             font-size: 12px
 
     .banner
-        &-head
+        &__head
             width: 450px
             font-size: 12px
-        &-info
+        &__info
             font-size: 30px
             line-height: 120%
             margin: 5% 0 5%
-        &-descr
+        &__descr
             font-size: 12px
             font-weight: 300
             line-height: 20px
 
     .client
         margin-bottom: 50px
-        height: 310px
         padding: 50px 40px 0px
-        &_photo
+        &__photo
             width: 70px
             height: 70px
             top: -12%
 
-    .quotes
-        top: 22px
-        left: -44%
-
     .services
-        &__item
+        &-item
             margin: 60px 20px
 
-    .portfolio
-        &__item
+    .portfolio-slider
+        &-item
             width: 600px !important
             height: 300px
-            &-info
+            &__info
                 padding: 14px 24px 10px
-                &_text
-                    padding: 15px 0px
-                    font-size: 12px
-                    line-height: 1.24
-                &-heading
-                    font-size: 14px
-                    line-height: 1.24
-                    padding: 5px 0
-        &-slider
-            &__buttons
-                right: 35%
-                bottom: -5px
+            &__heading
+                font-size: 16px
+                line-height: 1.24
+                padding: 5px 0
 
     .text
-        &-client
-            padding: 5px 10px
-            line-height: 1.24
+        &--portfolio-slider
+            padding: 0px
 
+    .skills
+        margin-top: 5px
+
+    .portfolio-slider-item__info .portfolio-slider-buttons
+        bottom: -30px
 /*  --- Small devices (landscape phones, 576px and up) --- */
 
 @media screen and (max-width: 576px)
@@ -292,36 +283,28 @@
 
     .client
         padding: 35px 20px 0px
-        &_info
+        &__info
             padding-top: 20px
 
     .text
-        &-client
-            padding: 5px 10px
-        &-services
+        &--services
             width: 100%
 
     .quotes
         top: 22px
         left: -44%
 
-    .portfolio
-        &__item
-            width: 450px !important
+    .portfolio-slider
+        &-item
+            width: 80% !important
             height: 250px
-            &-info
-                &_icon
+            &__info
+                &__icon
                     display: none
-                &_heading
+                &__heading
                     font-size: 15px
                     line-height: 1.24
                     padding: 5px 0
-                &_text
-                    padding: 5px 0px
-        &-slider
-            &__buttons
-                right: 31%
-                bottom: -15px
 
     .skills
         padding: 5px
