@@ -23,9 +23,8 @@ $(document).ready(function() {
         arrows: true,
         fade: true,
         dots: false,
-        appendArrows: '.portfolio-slider-buttons',
-        prevArrow: '<button type="button" class="slider-prev"><img src="./img/left.png" alt="<" /></button>',
-        nextArrow: '<button type="button" class="slider-next"><img src="./img/right.png" alt=">" /></button>'
+        prevArrow: $('.slider-prev'),
+        nextArrow: $('.slider-next'),
     });
 });
 
