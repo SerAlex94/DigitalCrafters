@@ -282,6 +282,61 @@
     line-height: 1.24; }
   .banner__descr {
     padding: 5px; }
-  .btn--banner {
-    margin: 15px 0;
-    padding: 15px 30px; } }
+  .btn {
+    padding: 15px 30px;
+    font-size: 12px; }
+    .btn--banner {
+      margin: 15px 0; }
+    .btn--contact {
+      font-size: 12px;
+      padding: 10px;
+      font-weight: 300; }
+  .title--texted {
+    font-size: 16px;
+    line-height: 1.24; }
+    .title--texted::before {
+      font-size: 12px; }
+  .text {
+    padding: 5px 3px;
+    font-size: 12px;
+    line-height: 1.24; }
+    .text--portfolio {
+      width: 90%; }
+  .about-company__img {
+    padding: 10px 0; }
+  .client__photo {
+    width: 50px;
+    height: 50px;
+    top: -2%; }
+  .about-client__slider-controls .slick-dots {
+    display: none; }
+  .title {
+    font-size: 20px;
+    line-height: 25px; }
+  .services-item {
+    width: 170px;
+    height: 100%;
+    margin: 35px 0; }
+    .services-item__heading {
+      padding-top: 30px;
+      font-size: 12px;
+      line-height: 1.24; }
+    .services-item__text {
+      padding: 20px; }
+    .services-item__icon-wrapper {
+      top: -17%;
+      left: 30%;
+      width: 60px;
+      height: 60px;
+      padding-top: 15px; }
+  .portfolio-slider-item {
+    height: 90%; }
+    .portfolio-slider-item__img {
+      width: 150px;
+      height: 150px; }
+    .portfolio-slider-item__info {
+      padding: 10px;
+      margin-bottom: 40px; }
+  .form-field__input {
+    padding: 12px 10px 10px 43px;
+    font-size: 12px; } }

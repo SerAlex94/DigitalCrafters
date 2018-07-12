@@ -26,7 +26,23 @@ $(document).ready(function() {
         prevArrow: $('.slider-prev'),
         nextArrow: $('.slider-next'),
     });
+
+    $(".btn").click(function() {
+        $("#popup-form__bg").fadeIn(300);
+        var iddiv = $(this).attr("iddiv");
+        $("#" + iddiv).fadeIn(300);
+        $("#popup-form__bg").attr("opendiv", iddiv);
+        return false;
+    });
+
+    $("#popup-form__bg").click(function() {
+        var iddiv = $("#popup-form__bg").attr("opendiv");
+        $("#popup-form__bg").fadeOut(300);
+        $("#" + iddiv).fadeOut(300);
+    });
 });
+
+
 
 
 

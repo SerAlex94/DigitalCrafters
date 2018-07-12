@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div class="nav-btn">
-                    <a class="btn--nav" href="#">REQUEST A QUOTE</a>
+                    <a iddiv="box" class="btn btn--nav" href="#">REQUEST A QUOTE</a>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                 <h1 class="banner__info">We give you the stuff you need to make more money</h1>
                 <p class="banner__descr">Bring us your remarkable business. We’ll give you the design, content and tool
                     you need to become unstoppable. 2018 is the year you become rich.</p>
-                <a href="#" class="btn btn--banner">Claim your free consultation</a>
+                <a href="#" iddiv="box" class="btn btn--banner">Claim your free consultation</a>
             </div>
         </div>
     </header>
@@ -68,7 +68,7 @@
                     sprint out of the starting blocks… and then disappear entirely. Luckily, you found us, and no one
                     can stop you now from working with us.
                 </p>
-                <a href="#" class="btn btn--about">Claim your free consultation</a>
+                <a href="#" iddiv="box" class="btn btn--about">Claim your free consultation</a>
             </div>
             <div class="about-client">
                 <img class="about-client__quotes" src="img/quotes.png" alt="">
@@ -232,7 +232,7 @@
         <div class="contact">
             <div class="container container--contact">
                 <h2 class="title title--contact">Contact us today to learn how we increase your revenue.</h2>
-                <form class="form form--contact">
+                <div class="form form--contact">
                     <div class="form-field">
                         <label class="form-field__label" for="name">
                             <img src="./img/contact-icon.png" alt="">
@@ -251,12 +251,34 @@
                         </span>
                         <textarea class="form-field__input form-field__input--textarea" id="textarea" placeholder="How we can help you?"></textarea>
                     </div>
-                    <input type="submit" class="btn btn--contact" value="Claim your free consultation" />
-                </form>
+                    <input type="submit" iddiv="box" class="btn btn--contact" value="Claim your free consultation" />
+                </div>
             </div>
         </div>
     </footer>
-
+    <div id="popup-form__bg"></div>
+    <div id="box" class="popup-form">
+        <h2 class="title title--popup">Claim your free consultation</h2>
+        <div class="form-field">
+            <label class="form-field__label" for="name">
+                <img src="./img/contact-icon.png" alt="">
+            </label>
+            <input type="text" class="form-field__input" id="name" placeholder="Your name">
+        </div>
+        <div class="form-field">
+            <label class="form-field__label" for="email">
+                <img src="./img/contact-mail.png" alt="">
+            </label>
+            <input type="email" id="email" class="form-field__input" placeholder="Email">
+        </div>
+        <div class="form-field">
+            <span class="form-field__label" for="textarea">
+                            <img src="./img/contact-question.png" alt="">
+                        </span>
+            <textarea class="form-field__input form-field__input--textarea" id="textarea" placeholder="How we can help you?"></textarea>
+        </div>
+        <input type="submit" iddiv="box" class="btn btn--popup" value="Submit" />
+    </div>
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 
