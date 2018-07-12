@@ -14,11 +14,10 @@ body
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-input,textarea
+input, textarea
     outline: none
     &::placeholder
         color: #fff !important
-
 
 //textarea
 //&::placeholder
@@ -32,7 +31,6 @@ input,textarea
     min-height: 775px
     position: relative
     background: linear-gradient(to bottom, #bc52a8, #7442bc)
-
 
 /* --- container width&style --- */
 
@@ -217,6 +215,12 @@ input,textarea
         border: 2px solid #ffffff
         text-decoration: none
         padding: 10px 20px
+    &--wtf
+        transform: scale(5)
+        position: fixed
+        bottom: 50px
+        right: 50px
+        cursor: pointer
 
 /* --- pulse button --- */
 
@@ -255,8 +259,8 @@ input,textarea
 /* --- slick slider --- */
 
 .slick
-	&-list
-		overflow: visible
+    &-list
+        overflow: visible
 
 /* --- slick dots end --- */
 
@@ -333,8 +337,8 @@ input,textarea
     background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
     text-align: center
     overflow: hidden
-    //&-slider__buttons
-    //    position: relative
+//&-slider__buttons
+//    position: relative
 
 .about-client
     position: relative
@@ -343,9 +347,7 @@ input,textarea
     &__quotes
         position: absolute
         left: 0
-        transform: translate(-60%,-75%)
-
-
+        transform: translate(-60%, -75%)
 
 .about-client__slider-controls
     display: inline-block
@@ -382,6 +384,7 @@ input,textarea
     float: left
     img
         margin-right: 2px
+
 .slick-next
     float: right
     img
@@ -432,7 +435,6 @@ input,textarea
         left: 50%
         transform: translateX(-50%)
 
-
 /* --- section services --- */
 
 .services
@@ -479,51 +481,51 @@ input,textarea
 .portfolio-slider-wrapper
     //position: relative
     margin-top: 40px
-    //width: 1170px
+//width: 1170px
 
 .portfolio-slider-item
-        display: block !important
-        //position: relative
-        text-align: left
-        margin: 0 auto
-        overflow: hidden
-        width: 1170px !important
-        height: 587px
-        box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
-        border-radius: 5px
-        background-color: #ffffff
+    display: block !important
+    //position: relative
+    text-align: left
+    margin: 0 auto
+    overflow: hidden
+    width: 1170px !important
+    height: 587px
+    box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
+    border-radius: 5px
+    background-color: #ffffff
+    vertical-align: top
+    &__info
+        position: relative
+        display: inline-block
+        width: 50%
         vertical-align: top
-        &__info
-            position: relative
-            display: inline-block
-            width: 50%
-            vertical-align: top
-            padding: 50px 44px 10px
-            .portfolio-slider-buttons
-                position: absolute
-                bottom: -50px
-        &__icon
-            width: 77px
-            height: 77px
-            background-color: #188afd
-            border-radius: 50%
-            padding-top: 20px
-            padding-left: 24px
-        &__heading
-            color: #29384d
-            font-size: 24px
-            font-weight: 600
-            line-height: 36px
-            padding: 20px 0
-        &__skills
-            display: block
-            float: left
-            color: #29384d
-        &__img
-            display: inline-block
-            float: left
-            width: 50%
-            overflow: hidden
+        padding: 50px 44px 10px
+        .portfolio-slider-buttons
+            position: absolute
+            bottom: -50px
+    &__icon
+        width: 77px
+        height: 77px
+        background-color: #188afd
+        border-radius: 50%
+        padding-top: 20px
+        padding-left: 24px
+    &__heading
+        color: #29384d
+        font-size: 24px
+        font-weight: 600
+        line-height: 36px
+        padding: 20px 0
+    &__skills
+        display: block
+        float: left
+        color: #29384d
+    &__img
+        display: inline-block
+        float: left
+        width: 50%
+        overflow: hidden
 
 //.portfolio-slider-buttons
     position: absolute
@@ -555,7 +557,6 @@ input,textarea
     vertical-align: middle
     text-align: center
 
-
 .form-field
     position: relative
     margin: 20px
@@ -583,34 +584,31 @@ input,textarea
                 color: red
 
 /* -- popup form style -- */
-
-.popup-form
-    z-index: 9999
-    position: fixed
-    width: 500px
-    top: 100px
-    left: 50%
-    transform: translateX(-50%)
+.popup
     display: none
-    background: linear-gradient(to bottom, #bc52a8, #7442bc)
-    border: 4px solid #fff
-    border-radius: 20px
-    padding: 5px
-    .form-field__input--textarea
-        min-height: 75px
-
-#popup-form__bg
-    display: none
-    background-color: #9047c7
-    opacity: 0.7
     width: 100%
     height: 100%
-    z-index: 9998
+    z-index: 9999
     position: fixed
     top: 0
-    bottom: 0
-    right: 0
     left: 0
+    &__bg
+        width: 100%
+        height: 100%
+        background-color: rgba(144, 71, 199, .7)
+    &__form
+        position: fixed
+        width: 500px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: linear-gradient(to bottom, #bc52a8, #7442bc)
+        border: 4px solid #fff
+        border-radius: 20px
+        padding: 5px
+        .form-field__input--textarea
+            min-height: 75px
+
 
 //.blur
     filter: blur(3px) contrast(.8)
