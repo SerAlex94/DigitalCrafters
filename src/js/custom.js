@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $('.nav-toggle').click(function(){
         $(this).toggleClass('active');
         $('.nav-menu').slideToggle(400);
@@ -27,18 +26,26 @@ $(document).ready(function() {
         nextArrow: $('.slider-next'),
     });
 
-    $(".btn").click(function() {
-        $("#popup-form__bg").fadeIn(300);
-        var iddiv = $(this).attr("iddiv");
-        $("#" + iddiv).fadeIn(300);
-        $("#popup-form__bg").attr("opendiv", iddiv);
-        return false;
+    $(".js-open-popup").click(function() {
+        $(".popup").fadeIn(300);
+        $('body').css('overflow-y', 'hidden');
     });
 
-    $("#popup-form__bg").click(function() {
-        var iddiv = $("#popup-form__bg").attr("opendiv");
-        $("#popup-form__bg").fadeOut(300);
-        $("#" + iddiv).fadeOut(300);
+    $(".js-close-popup").click(function() {
+        $(".popup").fadeOut(300);
+        $('body').css('overflow-y', 'visible');
+    });
+
+    $(".js-scroll-to-top").click(function() {
+        alert('js-scroll-to-top');
+    });
+
+    $(".js-scroll-to-footer").click(function() {
+        alert('js-scroll-to-footer');
+    });
+
+    $(".js-submit").click(function() {
+        alert('js-submit');
     });
 });
 
