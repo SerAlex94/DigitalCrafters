@@ -52,40 +52,45 @@ $(document).ready(function() {
         return false;
     });
 
-    $(".js-submit").click(function() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var text = document.getElementById('textarea').value;
+    $("form").submit(function(e) {
+        e.preventDefault();
+
+        // think how you can optimize this function !!!
+        // with some cycle
+
+        // fill this obj with data from input - obj { key: value }
+        var obj = {};
+        var name = $(this).find('input[name="name"]');
+        var email = $(this).find('input[name="email"]');
+        // textarea is not required
+        // var text = $(this).find('textarea[name="message"]');
+
         var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        if (name === "") {
-            $("#name").addClass("error");
+        if (!name.val()) {
+            name.addClass("error");
             alert('Please enter your name');
         }
-        else if (email === "") {
-            $("#email").addClass("error");
+        else if (!email.val()) {
+            email.addClass("error");
             alert('Please enter your email');
         }
-        else if (!pattern.test(email)) {
+        else if (!pattern.test(email.val())) {
             $("#email").addClass("error");
             alert('Please enter correct email');
         }
-        else if (text === "") {
-            $("#textarea").addClass("error");
-            alert('Please enter your question');
-        }
+        // textarea is not required
+        // else if (!text.val()) {
+        //     text.addClass("error");
+        //     alert('Please enter your question');
+        // }
         else {
             alert('Your request have been sent');
+            this.reset();
         }
 
-        if (name !== "") $("#name").removeClass("error");
-        if (email !== "" && pattern.test(email)) $("#email").removeClass("error");
-        if (text !== "") $("#textarea").removeClass("error");
+        if (name.val())  name.removeClass("error");
+        if (email.val() && pattern.test(email)) email.removeClass("error");
+        // if (text.val() !== "") text.removeClass("error");
     });
 });
-
-
-
-
-
-// var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
