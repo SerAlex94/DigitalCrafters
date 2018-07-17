@@ -32,18 +32,24 @@ $(document).ready(function() {
     });
 
     $(".js-close-popup").click(function() {
-        $(".popup").fadeOut(300);
+        $(".popup").fadeOut(0);
         $('body').css('overflow-y', 'visible');
     });
 
     $(".js-scroll-to-top").click(function() {
         $("html, body").animate({ scrollTop: 0}, "slow");
         return false;
-        // $(window).scrollTop(0);
     });
 
     $(".js-scroll-to-footer").click(function() {
         $('html,body').animate({scrollTop: document.body.scrollHeight},"slow");
+    });
+
+    $('.js-smooth').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 500);
+        return false;
     });
 
     $(".js-submit").click(function() {
@@ -52,18 +58,25 @@ $(document).ready(function() {
         var text = document.getElementById('textarea').value;
         var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-
-
-        if (name === "") $("#name").addClass("error") &&
+        if (name === "") {
+            $("#name").addClass("error");
             alert('Please enter your name');
-        else if (email === "") $("#email").addClass("error") &&
+        }
+        else if (email === "") {
+            $("#email").addClass("error");
             alert('Please enter your email');
-        else if (!pattern.test(email)) $("#email").addClass("error") &&
+        }
+        else if (!pattern.test(email)) {
+            $("#email").addClass("error");
             alert('Please enter correct email');
-        else if (text === "") $("#textarea").addClass("error") &&
+        }
+        else if (text === "") {
+            $("#textarea").addClass("error");
             alert('Please enter your question');
-        else
+        }
+        else {
             alert('Your request have been sent');
+        }
 
         if (name !== "") $("#name").removeClass("error");
         if (email !== "" && pattern.test(email)) $("#email").removeClass("error");

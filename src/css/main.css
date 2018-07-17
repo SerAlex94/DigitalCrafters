@@ -9,6 +9,8 @@
 
 body {
   overflow-x: hidden;
+  margin-right: -webkit-calc(-1 * (100vw - 100%));
+  margin-right: calc(-1 * (100vw - 100%));
   background-color: #ffffff;
   color: #606f85;
   font-family: "Poppins", Arial, sans-serif;
@@ -234,7 +236,7 @@ input, textarea {
             transform: scale(5);
     position: fixed;
     bottom: 50px;
-    right: 80px;
+    right: 90px;
     text-align: center;
     width: 20px;
     height: 10px;
@@ -242,7 +244,9 @@ input, textarea {
     color: #673fbf;
     font-size: 9px;
     font-weight: 600;
-    padding-top: 1px; }
+    padding-top: 1px;
+    margin-right: -webkit-calc(-1 * (100vw - 100%));
+    margin-right: calc(-1 * (100vw - 100%)); }
 
 /* --- pulse button --- */
 .btn--banner:hover::after {
@@ -432,6 +436,9 @@ input, textarea {
   background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%);
   text-align: center;
   overflow: hidden; }
+
+.about-company__img {
+  padding: 20px 0; }
 
 .about-client {
   position: relative; }
@@ -644,6 +651,8 @@ input, textarea {
   height: 100%;
   z-index: 9999;
   position: fixed;
+  margin-right: -webkit-calc(-1 * (100vw - 100%));
+  margin-right: calc(-1 * (100vw - 100%));
   top: 0;
   left: 0; }
   .popup__bg {
@@ -670,4 +679,4 @@ input, textarea {
       min-height: 75px; }
 
 .error {
-  border: red; }
+  border: 2px solid red; }
