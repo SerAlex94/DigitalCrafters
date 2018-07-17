@@ -37,15 +37,37 @@ $(document).ready(function() {
     });
 
     $(".js-scroll-to-top").click(function() {
-        alert('js-scroll-to-top');
+        $("html, body").animate({ scrollTop: 0}, "slow");
+        return false;
+        // $(window).scrollTop(0);
     });
 
     $(".js-scroll-to-footer").click(function() {
-        alert('js-scroll-to-footer');
+        $('html,body').animate({scrollTop: document.body.scrollHeight},"slow");
     });
 
     $(".js-submit").click(function() {
-        alert('js-submit');
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var text = document.getElementById('textarea').value;
+        var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+
+
+        if (name === "") $("#name").addClass("error") &&
+            alert('Please enter your name');
+        else if (email === "") $("#email").addClass("error") &&
+            alert('Please enter your email');
+        else if (!pattern.test(email)) $("#email").addClass("error") &&
+            alert('Please enter correct email');
+        else if (text === "") $("#textarea").addClass("error") &&
+            alert('Please enter your question');
+        else
+            alert('Your request have been sent');
+
+        if (name !== "") $("#name").removeClass("error");
+        if (email !== "" && pattern.test(email)) $("#email").removeClass("error");
+        if (text !== "") $("#textarea").removeClass("error");
     });
 });
 
@@ -53,4 +75,4 @@ $(document).ready(function() {
 
 
 
-var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+// var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

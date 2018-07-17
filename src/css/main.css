@@ -139,7 +139,8 @@ input, textarea {
   -webkit-border-radius: 53px;
           border-radius: 53px;
   font-family: "Poppins", Arial, sans-serif;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .btn--nav {
     display: inline;
     color: #ffffff;
@@ -227,14 +228,21 @@ input, textarea {
     border: 2px solid #ffffff;
     text-decoration: none;
     padding: 10px 20px; }
-  .btn--wtf {
+  .btn--up {
     -webkit-transform: scale(5);
         -ms-transform: scale(5);
             transform: scale(5);
     position: fixed;
     bottom: 50px;
-    right: 50px;
-    cursor: pointer; }
+    right: 80px;
+    text-align: center;
+    width: 20px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #673fbf;
+    font-size: 9px;
+    font-weight: 600;
+    padding-top: 1px; }
 
 /* --- pulse button --- */
 .btn--banner:hover::after {
@@ -287,7 +295,69 @@ input, textarea {
 .slick-list {
   overflow: visible; }
 
-/* --- slick dots end --- */
+.about-client__slider-controls {
+  display: inline-block; }
+  .about-client__slider-controls .slick-dots {
+    margin: 0 10px;
+    position: relative;
+    top: 4px;
+    bottom: auto;
+    width: auto;
+    height: 10px;
+    display: inline-block; }
+    .about-client__slider-controls .slick-dots li {
+      position: relative;
+      top: -10px; }
+
+.slick-prev,
+.slick-next {
+  position: relative;
+  top: 8px;
+  left: auto;
+  right: auto;
+  display: inline-block;
+  outline: none;
+  margin: 0 10px;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(99, 111, 133, 0.25); }
+  .slick-prev:before,
+  .slick-next:before {
+    content: ''; }
+
+.slick-prev {
+  float: left; }
+  .slick-prev img {
+    margin-right: 2px; }
+
+.slick-next {
+  float: right; }
+  .slick-next img {
+    margin-left: 3px; }
+
+.slider-prev,
+.slider-next {
+  outline: none;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(99, 111, 133, 0.25); }
+
+.slider-prev {
+  margin-right: 5px; }
+  .slider-prev img {
+    margin-right: 2px; }
+
+.slider-next {
+  float: right; }
+  .slider-next img {
+    margin-left: 3px; }
+
 /* --- title & text style --- */
 .title {
   position: relative;
@@ -355,7 +425,7 @@ input, textarea {
     font-weight: 300;
     line-height: 32px; }
 
-/* --- section about & about__client --- */
+/* --- section about & about-client --- */
 .about {
   background-image: -webkit-linear-gradient(120deg, #eff5fa 0%, #fff 80%, #fff 100%);
   background-image: -o-linear-gradient(120deg, #eff5fa 0%, #fff 80%, #fff 100%);
@@ -373,69 +443,6 @@ input, textarea {
     -webkit-transform: translate(-60%, -75%);
         -ms-transform: translate(-60%, -75%);
             transform: translate(-60%, -75%); }
-
-.about-client__slider-controls {
-  display: inline-block; }
-  .about-client__slider-controls .slick-dots {
-    margin: 0 10px;
-    position: relative;
-    top: 4px;
-    bottom: auto;
-    width: auto;
-    height: 10px;
-    display: inline-block; }
-    .about-client__slider-controls .slick-dots li {
-      position: relative;
-      top: -10px; }
-
-.slick-prev,
-.slick-next {
-  position: relative;
-  top: 8px;
-  left: auto;
-  right: auto;
-  display: inline-block;
-  outline: none;
-  margin: 0 10px;
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid rgba(99, 111, 133, 0.25); }
-  .slick-prev:before,
-  .slick-next:before {
-    content: ''; }
-
-.slick-prev {
-  float: left; }
-  .slick-prev img {
-    margin-right: 2px; }
-
-.slick-next {
-  float: right; }
-  .slick-next img {
-    margin-left: 3px; }
-
-.slider-prev,
-.slider-next {
-  outline: none;
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid rgba(99, 111, 133, 0.25); }
-
-.slider-prev {
-  margin-right: 5px; }
-  .slider-prev img {
-    margin-right: 2px; }
-
-.slider-next {
-  float: right; }
-  .slider-next img {
-    margin-left: 3px; }
 
 .client {
   display: inline-block;
@@ -661,3 +668,6 @@ input, textarea {
     padding: 5px; }
     .popup__form .form-field__input--textarea {
       min-height: 75px; }
+
+.error {
+  border: red; }

@@ -14,15 +14,10 @@ body
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-input,textarea
+input, textarea
     outline: none
     &::placeholder
         color: #fff !important
-
-
-//textarea
-//&::placeholder
-//    color: #fff
 
 /* --- header --- */
 .header
@@ -33,14 +28,12 @@ input,textarea
     position: relative
     background: linear-gradient(to bottom, #bc52a8, #7442bc)
 
-
 /* --- container width&style --- */
 
 .container
     padding: 140px 20px 140px
     margin: 0 auto
     &--nav
-        // max-width to width
         width: 1920px
         padding: 0 50px
         &:after
@@ -108,12 +101,6 @@ input,textarea
     vertical-align: middle
     text-align: center
     padding-top: 100px
-    //min-height: 500px
-    //&::before
-    //    content: ''
-    //    display: inline-block
-    //    height: 100%
-    //    vertical-align: middle
     &__head
         opacity: 0.5
         width: 650px
@@ -142,6 +129,7 @@ input,textarea
     border-radius: 53px
     font-family: "Poppins", Arial, sans-serif
     position: relative
+    cursor: pointer
     &--nav
         display: inline
         color: #ffffff
@@ -153,7 +141,6 @@ input,textarea
         padding: 20px 40px
         transition: 0.5s
         &:hover
-            //color: #b951a9
             background-color: rgba(255, 255, 255, 0.3)
             font-size: 14px
     &--banner
@@ -217,6 +204,21 @@ input,textarea
         border: 2px solid #ffffff
         text-decoration: none
         padding: 10px 20px
+    &--up
+        transform: scale(5)
+        position: fixed
+        bottom: 50px
+        right: 80px
+        text-align: center
+        width: 20px
+        height: 10px
+        background: rgba(255, 255, 255, .7)
+        color: #673fbf
+        font-size: 9px
+        font-weight: 600
+        padding-top: 1px
+        //border: 1px solid #673fbf
+
 
 /* --- pulse button --- */
 
@@ -258,7 +260,65 @@ input,textarea
 	&-list
 		overflow: visible
 
-/* --- slick dots end --- */
+.about-client__slider-controls
+  display: inline-block
+  .slick-dots
+    margin: 0 10px
+    position: relative
+    top: 4px
+    bottom: auto
+    width: auto
+    height: 10px
+    display: inline-block
+    li
+      position: relative
+      top: -10px
+
+.slick-prev,
+.slick-next
+  position: relative
+  top: 8px
+  left: auto
+  right: auto
+  display: inline-block
+  outline: none
+  margin: 0 10px
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  background-color: transparent
+  border: 1px solid rgba(99, 111, 133, 0.25)
+  &:before
+    content: ''
+
+.slick-prev
+  float: left
+  img
+    margin-right: 2px
+
+.slick-next
+  float: right
+  img
+    margin-left: 3px
+
+.slider-prev,
+.slider-next
+  outline: none
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  background-color: transparent
+  border: 1px solid rgba(99, 111, 133, 0.25)
+
+.slider-prev
+  margin-right: 5px
+  img
+    margin-right: 2px
+
+.slider-next
+  float: right
+  img
+    margin-left: 3px
 
 /* --- title & text style --- */
 
@@ -295,7 +355,6 @@ input,textarea
         &:after
             background-color: #fff
     &--contact
-        //margin: 0 50px
         padding-top: 4%
         color: #ffffff
         &:after
@@ -327,14 +386,12 @@ input,textarea
         font-weight: 300
         line-height: 32px
 
-/* --- section about & about__client --- */
+/* --- section about & about-client --- */
 
 .about
     background-image: linear-gradient(330deg, #eff5fa 0%, #fff 80%, #fff 100%)
     text-align: center
     overflow: hidden
-    //&-slider__buttons
-    //    position: relative
 
 .about-client
     position: relative
@@ -344,67 +401,6 @@ input,textarea
         position: absolute
         left: 0
         transform: translate(-60%,-75%)
-
-
-
-.about-client__slider-controls
-    display: inline-block
-    .slick-dots
-        margin: 0 10px
-        position: relative
-        top: 4px
-        bottom: auto
-        width: auto
-        height: 10px
-        display: inline-block
-        li
-            position: relative
-            top: -10px
-
-.slick-prev,
-.slick-next
-    position: relative
-    top: 8px
-    left: auto
-    right: auto
-    display: inline-block
-    outline: none
-    margin: 0 10px
-    width: 32px
-    height: 32px
-    border-radius: 50%
-    background-color: transparent
-    border: 1px solid rgba(99, 111, 133, 0.25)
-    &:before
-        content: ''
-
-.slick-prev
-    float: left
-    img
-        margin-right: 2px
-.slick-next
-    float: right
-    img
-        margin-left: 3px
-
-.slider-prev,
-.slider-next
-    outline: none
-    width: 32px
-    height: 32px
-    border-radius: 50%
-    background-color: transparent
-    border: 1px solid rgba(99, 111, 133, 0.25)
-
-.slider-prev
-    margin-right: 5px
-    img
-        margin-right: 2px
-
-.slider-next
-    float: right
-    img
-        margin-left: 3px
 
 .client
     display: inline-block
@@ -432,7 +428,6 @@ input,textarea
         left: 50%
         transform: translateX(-50%)
 
-
 /* --- section services --- */
 
 .services
@@ -445,7 +440,6 @@ input,textarea
     text-align: left
     margin: 90px 30px
     width: 370px
-    //height: 332px
     box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
     border-radius: 5px
     background-color: #ffffff
@@ -477,13 +471,10 @@ input,textarea
     background: linear-gradient(30deg, #eff5fa 0%, #fff 80%, #fff 100%)
 
 .portfolio-slider-wrapper
-    //position: relative
     margin-top: 40px
-    //width: 1170px
 
 .portfolio-slider-item
         display: block !important
-        //position: relative
         text-align: left
         margin: 0 auto
         overflow: hidden
@@ -525,10 +516,6 @@ input,textarea
             width: 50%
             overflow: hidden
 
-//.portfolio-slider-buttons
-    position: absolute
-    bottom: -50px
-
 .skills
     float: left
     margin-right: 10px
@@ -554,7 +541,6 @@ input,textarea
     display: table-cell
     vertical-align: middle
     text-align: center
-
 
 .form-field
     position: relative
@@ -584,34 +570,30 @@ input,textarea
 
 /* -- popup form style -- */
 
-.popup-form
-    z-index: 9999
+.popup
+  display: none
+  width: 100%
+  height: 100%
+  z-index: 9999
+  position: fixed
+  top: 0
+  left: 0
+  &__bg
+    width: 100%
+    height: 100%
+    background-color: rgba(144, 71, 199, .7)
+  &__form
     position: fixed
     width: 500px
-    top: 100px
+    top: 50%
     left: 50%
-    transform: translateX(-50%)
-    display: none
+    transform: translate(-50%, -50%)
     background: linear-gradient(to bottom, #bc52a8, #7442bc)
     border: 4px solid #fff
     border-radius: 20px
     padding: 5px
     .form-field__input--textarea
-        min-height: 75px
+      min-height: 75px
 
-#popup-form__bg
-    display: none
-    background-color: #9047c7
-    opacity: 0.7
-    width: 100%
-    height: 100%
-    z-index: 9998
-    position: fixed
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-
-//.blur
-    filter: blur(3px) contrast(.8)
-    brightness: (.8)
+.error
+    border: red
