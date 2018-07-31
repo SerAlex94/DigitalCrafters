@@ -59,38 +59,60 @@ $(document).ready(function() {
         // with some cycle
 
         // fill this obj with data from input - obj { key: value }
+
         var obj = {};
-        var name = $(this).find('input[name="name"]');
-        var email = $(this).find('input[name="email"]');
-        // textarea is not required
-        // var text = $(this).find('textarea[name="message"]');
-
         var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        var inputs = e.target.querySelectorAll('input');
 
-        if (!name.val()) {
-            name.addClass("error");
-            alert('Please enter your name');
+        for (var input of inputs) {
+
+            if (input.value) {
+                if (input.name === "email") {
+                    $(input).removeClass("error");
+                    obj[input.email] = input.value;
+                    alert('Your request have been sent');
+                    console.log(obj);
+                } else {
+                    $(input).addClass("error");
+                    alert('Please enter your email');
+                }
+                $(input).removeClass("error");
+                obj[input.name] = input.value;
+            } else {
+                $(input).addClass("error");
+                alert('Please enter your name');
+                break;
+            }
+
+
+            // $(input).addClass("error");
+            // alert('Please enter your name');
         }
-        else if (!email.val()) {
-            email.addClass("error");
-            alert('Please enter your email');
-        }
-        else if (!pattern.test(email.val())) {
-            $("#email").addClass("error");
-            alert('Please enter correct email');
-        }
-        // textarea is not required
-        // else if (!text.val()) {
-        //     text.addClass("error");
-        //     alert('Please enter your question');
+
+
+        // obj['name'] = inputs[0].value;
+        // obj['email'] = inputs[1].value;
+
+
+
+        // if (!name.val()) {
+        //     name.addClass("error");
+        //     alert('Please enter your name');
         // }
-        else {
-            alert('Your request have been sent');
-            this.reset();
-        }
-
-        if (name.val())  name.removeClass("error");
-        if (email.val() && pattern.test(email)) email.removeClass("error");
-        // if (text.val() !== "") text.removeClass("error");
+        // else if (!email.val()) {
+        //     email.addClass("error");
+        //     alert('Please enter your email');
+        // }
+        // else if (!pattern.test(email.val())) {
+        //     email.addClass("error");
+        //     alert('Please enter correct email');
+        // }
+        // else {
+        //     alert('Your request have been sent');
+        //     this.reset();
+        // }
+        //
+        // if (name.val()) name.removeClass("error");
+        // if (email.val() && pattern.test(email.val())) email.removeClass("error");
     });
 });
