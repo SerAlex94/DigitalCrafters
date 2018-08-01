@@ -58,67 +58,27 @@ $(document).ready(function() {
         var obj = {};
         var pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         var inputs = e.target.querySelectorAll('input');
-
-        // for...of, к сожалению, это ES6. Так что я неправильно тебе подсказал и для этого случая он не подходит
-        // вариант 1
-        // for (var i of inputs) {
-        //     if (inputs[i].value) {
-        //         if (inputs[i].name === "email") {
-        //             $(inputs[i]).removeClass("error");
-        //             obj[inputs[i].email] = inputs[i].value;
-        //             alert('Your request have been sent');
-        //             console.log(obj);
-        //         } else {
-        //             $(inputs[i]).addClass("error");
-        //             alert('Please enter your email');
-        //         }
-        //         $(inputs[i]).removeClass("error");
-        //         obj[inputs[i].name] = inputs[i].value;
-        //     } else {
-        //         $(inputs[i]).addClass("error");
-        //     }
-        // }
-
-        // вариант 2
-        // for (var i in inputs) {
-        //     if (inputs[i].value) {
-        //         if (inputs[i].name === "email") {
-        //             if (pattern.test(inputs[i].value)) {
-        //                 $(inputs[i]).removeClass("error");
-        //                 obj[inputs[i].name] = inputs[i].value;
-        //             } else {
-        //                 $(inputs[i]).addClass("error");
-        //             }
-        //         } else {
-        //             $(inputs[i]).removeClass("error");
-        //             obj[inputs[i].name] = inputs[i].value;
-        //         }
-        //     } else {
-        //         $(inputs[i]).addClass("error");
-        //     }
-        // }
-
-        // вариант 3
-        // inputs.forEach(function(input) {
-        //     obj[input.name] = input.value;
-        // });
-        //
-        // for (var key in obj) {
-        //     if (!obj[key]) {
-        //         $(e.target).find('input[name=' + key + ']').addClass('error');
-        //     } else {
-        //         if (key === 'email' && !pattern.test(obj[key])) {
-        //             $(e.target).find('input[name=' + key + ']').addClass('error');
-        //         } else {
-        //             $(e.target).find('input[name=' + key + ']').removeClass('error');
-        //         }
-        //     }
-        // };
-
+        for (var i in inputs) {
+            if (inputs[i].value) {
+                if (inputs[i].name === "email") {
+                    if (pattern.test(inputs[i].value)) {
+                        $(inputs[i]).removeClass("error");
+                        obj[inputs[i].name] = inputs[i].value;
+                    } else {
+                        $(inputs[i]).addClass("error");
+                    }
+                } else {
+                    $(inputs[i]).removeClass("error");
+                    obj[inputs[i].name] = inputs[i].value;
+                }
+            } else {
+                $(inputs[i]).addClass("error");
+            }
+        }
         if (e.target.querySelector('.error')) {
-            alert(':(');
+            alert('Please, fill the fields');
         } else {
-            alert(':)');
+            alert('Your request have been sent!');
             obj.message = $(e.target).find('textarea').val();
             console.log(obj);
         }

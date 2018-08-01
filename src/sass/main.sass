@@ -10,12 +10,12 @@
 body
     overflow-x: hidden
     margin-right: calc(-1 * (100vw - 100%))
-    background-color: #ffffff
+    background-color: #fff
     color: #606f85
     font-family: "Poppins", Arial, sans-serif
     font-size: 17px
 
-input, textarea
+input, textarea, button
     outline: none
     &::placeholder
         color: #fff !important
@@ -73,7 +73,7 @@ input, textarea
         font-weight: 600
     &__link
         text-decoration: none
-        color: #ffffff
+        color: #fff
         font-size: 14px
         text-transform: uppercase
         padding: 0 12px
@@ -102,23 +102,20 @@ input, textarea
     vertical-align: middle
     text-align: center
     padding-top: 100px
+    color: #fff
+    font-size: 24px
     &__head
         opacity: 0.5
         width: 650px
         margin: 0 auto
-        color: #ffffff
-        font-size: 24px
         text-transform: uppercase
     &__info
         display: block
-        color: #ffffff
         font-size: 76px
         line-height: 120%
         margin: 5% 0 5%
     &__descr
         display: block
-        color: #ffffff
-        font-size: 24px
         font-weight: 300
         line-height: 50px
         padding: 0 65px
@@ -131,13 +128,15 @@ input, textarea
     font-family: "Poppins", Arial, sans-serif
     position: relative
     cursor: pointer
+    font-size: 24px
+    font-weight: 600
     &--nav
         display: inline
-        color: #ffffff
+        color: #fff
         font-size: 14px
         text-transform: uppercase
         border-radius: 27px
-        border: 2px solid #ffffff
+        border: 2px solid #fff
         text-decoration: none
         padding: 20px 40px
         transition: 0.5s
@@ -145,11 +144,9 @@ input, textarea
             background-color: rgba(255, 255, 255, 0.3)
             font-size: 14px
     &--banner
-        background-color: #ffffff
+        background-color: #fff
         text-decoration: none
         color: #673fbf
-        font-size: 24px
-        font-weight: 600
         margin-top: 5%
         padding: 43px 64px 43px 64px
         text-transform: uppercase
@@ -178,31 +175,27 @@ input, textarea
     &--about
         background-color: #673fbf
         box-shadow: 0 17px 25px rgba(122, 135, 157, 0.39)
-        color: #ffffff
-        font-size: 24px
-        font-weight: 600
+        color: #fff
         text-transform: uppercase
         text-decoration: none
         padding: 41px 63px
         margin: 60px 0 100px
     &--contact
-        background-color: #ffffff
+        background-color: #fff
         color: #673fbf
         padding: 41px 63px
-        font-size: 24px
-        font-weight: 600
         text-transform: uppercase
         text-decoration: none
         margin: 1% 0 2%
     &--popup
         display: block
         margin: 0 auto 10px
-        color: #ffffff
+        color: #fff
         background: transparent
         font-size: 14px
         text-transform: uppercase
         border-radius: 27px
-        border: 2px solid #ffffff
+        border: 2px solid #fff
         text-decoration: none
         padding: 10px 20px
     &--up
@@ -216,7 +209,6 @@ input, textarea
         background: rgba(255, 255, 255, .7)
         color: #673fbf
         font-size: 9px
-        font-weight: 600
         padding-top: 1px
         margin-right: calc(-1 * (100vw - 100%))
 
@@ -257,9 +249,6 @@ input, textarea
 
 /* --- slick slider --- */
 
-.slick
-	&-list
-		overflow: visible
 
 .about-client__slider-controls
   display: inline-block
@@ -352,12 +341,12 @@ input, textarea
         background-color: #673fbf
         margin: 49px auto
     &--services
-        color: #ffffff
+        color: #fff
         &:after
             background-color: #fff
     &--contact
         padding-top: 4%
-        color: #ffffff
+        color: #fff
         &:after
             background-color: #fff
     &--popup
@@ -372,20 +361,17 @@ input, textarea
     padding: 10px 30px
     line-height: 32px
     text-align: center
+    font-weight: 300
+    margin: 0 auto
     &--services
         width: 540px
-        margin: 0 auto
         color: #fff
-        font-weight: 300
     &--portfolio
         width: 500px
-        margin: 0 auto
     &--portfolio-slider
         text-align: left
         padding: 20px 0 40px
         color: #606f85
-        font-weight: 300
-        line-height: 32px
 
 /* --- section about & about-client --- */
 
@@ -413,9 +399,9 @@ input, textarea
     width: 95% !important
     box-shadow: 0 20px 45px rgba(122, 135, 157, 0.06)
     border-radius: 6px
-    background-color: #ffffff
+    background-color: #fff
     position: relative
-    padding: 80px 80px 0
+    padding: 120px 80px 0
     &__info
         padding: 40px 0
         font-weight: 600
@@ -429,7 +415,7 @@ input, textarea
         background-color: #74328e
         border-radius: 50%
         position: absolute
-        top: -17%
+        top: 0
         left: 50%
         transform: translateX(-50%)
 
@@ -442,12 +428,11 @@ input, textarea
 .services-item
     display: inline-block
     vertical-align: top
-    text-align: left
     margin: 90px 30px
     width: 370px
     box-shadow: 0 11px 35px rgba(34, 34, 34, 0.44)
     border-radius: 5px
-    background-color: #ffffff
+    background-color: #fff
     position: relative
     &__text
         text-align: left
@@ -482,18 +467,16 @@ input, textarea
         display: block !important
         text-align: left
         margin: 0 auto
-        overflow: hidden
         width: 1170px !important
         height: 587px
         box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
         border-radius: 5px
-        background-color: #ffffff
+        background-color: #fff
         vertical-align: top
         &__info
             position: relative
             display: inline-block
             width: 50%
-            vertical-align: top
             padding: 50px 44px 10px
             .portfolio-slider-buttons
                 position: absolute
@@ -559,7 +542,7 @@ input, textarea
         width: 100%
         height: 64px
         padding: 11px 30px 10px 50px
-        color: #ffffff
+        color: #fff
         font-family: "Poppins", sans-serif
         font-size: 17px
         font-weight: 300

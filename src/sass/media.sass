@@ -207,7 +207,8 @@
             display: none
             min-width: 150px
             padding: 10px 0
-            background: rgba(255, 255, 255, 0.2)
+            color: #673fbf
+            background: rgba(255, 255, 255, 0.9)
             border-radius: 3px
             &__item
                 display: block
@@ -291,42 +292,6 @@
     .container
         width: 90%
 
-    .btn--nav
-        padding: 5px 10px
-
-    .client
-        padding: 35px 20px 0px
-        &__info
-            padding-top: 20px
-
-    .text
-        &--services
-            width: 100%
-
-    .about-client__quotes
-        display: none
-
-    .portfolio-slider
-        &-item
-            width: 80% !important
-            height: 250px
-            &__info
-                &__icon
-                    display: none
-                &__heading
-                    font-size: 15px
-                    line-height: 1.24
-                    padding: 5px 0
-
-    .skills
-        padding: 5px
-
-/*  --- Small devices (portrait phones, 320px and down) --- */
-
-@media screen and (max-width: 320px)
-    .container
-        width: 200px
-
     .nav
         top: 35px
         &-logo
@@ -350,6 +315,105 @@
             font-size: 12px
             padding: 10px
             font-weight: 300
+        &--nav
+            padding: 5px 10px
+        &--up
+            padding: 1px 0 0 1px
+            font-size: 9px
+
+    .client
+        padding: 35px 20px 0px
+        &__info
+            padding-top: 20px
+
+    .text
+        &--services
+            width: 100%
+        &--portfolio
+            width: auto
+
+    .title
+        line-height: 30px
+        &--popup
+            padding: 20px
+
+    .about-client__quotes
+        display: none
+
+    .services-item
+        width: 270px
+        height: 100%
+        margin: 35px 0
+        &__heading
+            padding: 45px 0 0 20px
+            font-size: 16px
+            line-height: 1.24
+        &__text
+            padding: 20px
+        &__icon-wrapper
+            top: -17%
+            left: 30%
+            width: 70px
+            height: 70px
+            padding-top: 17px
+
+    .portfolio-slider
+        &-item
+            width: 80% !important
+            height: 250px
+            &__info
+                &__icon
+                    display: none
+                &__heading
+                    font-size: 15px
+                    line-height: 1.24
+                    padding: 5px 0
+
+    .skills
+        padding: 5px
+
+    .popup__form
+        width: 100%
+        height: 100%
+        border: none
+        border-radius: 0
+
+/*  --- Small devices (portrait phones, 320px and down) --- */
+
+@media screen and (max-width: 320px)
+    .container
+        width: 200px
+
+    .nav
+        top: 35px
+        &-logo
+            top: -50%
+
+    .banner
+        &__head
+            width: 150px
+        &__info
+            font-size: 22px
+            line-height: 1.24
+        &__descr
+            padding: 5px
+
+    .btn
+        padding: 5px 15px
+        font-size: 12px
+        &--banner
+            margin: 15px 0
+        &--contact
+            font-size: 12px
+            padding: 10px
+            font-weight: 300
+        &--up
+            padding: 0 0 0 1px
+            font-size: 6px
+            width: 15px
+            height: 6px
+            bottom: 25px
+            right: 60px
 
     .title
         &--texted
@@ -362,8 +426,6 @@
         padding: 5px 3px
         font-size: 12px
         line-height: 1.24
-        &--portfolio
-            width: 90%
 
     .about-company__img
         padding: 10px 0
