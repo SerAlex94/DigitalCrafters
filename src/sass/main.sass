@@ -20,6 +20,15 @@ input, textarea, button
     &::placeholder
         color: #fff !important
 
+@-webkit-keyframes autofill
+    to
+        color: #fff
+        background: transparent
+
+input:-webkit-autofill
+    -webkit-animation-name: autofill
+    -webkit-animation-fill-mode: both
+
 /* --- header --- */
 .header
     display: table
@@ -212,7 +221,6 @@ input, textarea, button
         padding-top: 1px
         margin-right: calc(-1 * (100vw - 100%))
 
-
 /* --- pulse button --- */
 
 .btn--banner:hover::after
@@ -248,7 +256,6 @@ input, textarea, button
 /* --- pulse button end --- */
 
 /* --- slick slider --- */
-
 
 .about-client__slider-controls
   display: inline-block
@@ -415,7 +422,7 @@ input, textarea, button
         background-color: #74328e
         border-radius: 50%
         position: absolute
-        top: 0
+        top: -14%
         left: 50%
         transform: translateX(-50%)
 
@@ -464,45 +471,46 @@ input, textarea, button
     margin-top: 40px
 
 .portfolio-slider-item
-        display: block !important
-        text-align: left
-        margin: 0 auto
-        width: 1170px !important
-        height: 587px
-        box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
-        border-radius: 5px
-        background-color: #fff
-        vertical-align: top
-        &__info
-            position: relative
-            display: inline-block
-            width: 50%
-            padding: 50px 44px 10px
-            .portfolio-slider-buttons
-                position: absolute
-                bottom: -50px
-        &__icon
-            width: 77px
-            height: 77px
-            background-color: #188afd
-            border-radius: 50%
-            padding-top: 20px
-            padding-left: 24px
-        &__heading
-            color: #29384d
-            font-size: 24px
-            font-weight: 600
-            line-height: 36px
-            padding: 20px 0
-        &__skills
-            display: block
-            float: left
-            color: #29384d
-        &__img
-            display: inline-block
-            float: left
-            width: 50%
-            overflow: hidden
+    display: block !important
+    text-align: left
+    margin: 60px auto
+    width: 1170px !important
+    height: 587px
+    overflow: hidden
+    box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11)
+    border-radius: 5px
+    background-color: #fff
+    vertical-align: top
+    &__info
+        position: relative
+        display: inline-block
+        width: 50%
+        padding: 50px 44px 10px
+        .portfolio-slider-buttons
+            position: absolute
+            bottom: -50px
+    &__icon
+        width: 77px
+        height: 77px
+        background-color: #188afd
+        border-radius: 50%
+        padding-top: 20px
+        padding-left: 24px
+    &__heading
+        color: #29384d
+        font-size: 24px
+        font-weight: 600
+        line-height: 36px
+        padding: 20px 0
+    &__skills
+        display: block
+        float: left
+        color: #29384d
+    &__img
+        display: inline-block
+        float: left
+        width: 50%
+        overflow: hidden
 
 .skills
     float: left
@@ -586,3 +594,6 @@ input, textarea, button
 
 .error
     border: 2px solid red
+
+.slick-list
+    overflow: visible

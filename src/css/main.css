@@ -29,6 +29,15 @@ input, textarea, button {
   input::placeholder, textarea::placeholder, button::placeholder {
     color: #fff !important; }
 
+@-webkit-keyframes autofill {
+  to {
+    color: #fff;
+    background: transparent; } }
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both; }
+
 /* --- header --- */
 .header {
   display: table;
@@ -462,7 +471,7 @@ input, textarea, button {
     -webkit-border-radius: 50%;
             border-radius: 50%;
     position: absolute;
-    top: 0;
+    top: -14%;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -522,9 +531,10 @@ input, textarea, button {
 .portfolio-slider-item {
   display: block !important;
   text-align: left;
-  margin: 0 auto;
+  margin: 60px auto;
   width: 1170px !important;
   height: 587px;
+  overflow: hidden;
   -webkit-box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11);
           box-shadow: 0 25px 35px rgba(34, 34, 34, 0.11);
   -webkit-border-radius: 5px;
@@ -663,3 +673,6 @@ input, textarea, button {
 
 .error {
   border: 2px solid red; }
+
+.slick-list {
+  overflow: visible; }

@@ -51,7 +51,7 @@
       font-weight: 400; }
     .nav-menu__link {
       font-size: 12px;
-      padding: 0px 8px; }
+      padding: 0 8px; }
     .nav-logo {
       top: -50%; }
   .btn--nav {
@@ -96,7 +96,7 @@
     padding: 5px 20px;
     line-height: 16px; }
     .text--portfolio-slider {
-      padding: 15px 0px; }
+      padding: 15px 0; }
   .title {
     font-size: 30px;
     font-weight: 400;
@@ -112,11 +112,10 @@
     width: 80%; }
   .client {
     width: 95% !important;
-    padding: 70px 60px 0px; }
+    padding: 70px 60px 0; }
     .client__photo {
       width: 100px;
-      height: 100px;
-      top: -14%; }
+      height: 100px; }
   .services-item {
     width: 370px;
     height: 332px; }
@@ -155,7 +154,7 @@
   .header {
     min-height: 575px; }
   .nav {
-    top: 0px; }
+    top: 0; }
     .nav-logo {
       top: 6px; }
     .nav-toggle {
@@ -186,12 +185,10 @@
         line-height: 1.24; }
       .nav-menu__link {
         display: block;
-        padding: 10px 20px; }
+        padding: 10px 20px;
+        color: #bc52a8; }
         .nav-menu__link:hover {
-          font-size: 12px;
-          -webkit-border-radius: none;
-                  border-radius: none;
-          background-color: none; }
+          font-size: 12px; }
   .btn--nav:hover {
     background-color: rgba(255, 255, 255, 0);
     font-size: 12px; }
@@ -211,11 +208,10 @@
   .client {
     width: 80% !important;
     margin-bottom: 50px;
-    padding: 50px 40px 0px; }
+    padding: 70px 40px 0; }
     .client__photo {
       width: 70px;
-      height: 70px;
-      top: -12%; }
+      height: 70px; }
   .about-client__quotes {
     display: none; }
   .services-item {
@@ -236,7 +232,7 @@
       line-height: 1.24;
       padding: 5px 0; }
   .text--portfolio-slider {
-    padding: 0px; }
+    padding: 0; }
   .skills {
     margin-top: 5px; }
   .portfolio-slider-item__info .portfolio-slider-buttons {
@@ -246,6 +242,8 @@
 @media screen and (max-width: 576px) {
   .container {
     width: 90%; }
+    .container--about {
+      overflow: hidden; }
   .nav {
     top: 35px; }
     .nav-logo {
@@ -272,7 +270,7 @@
       padding: 1px 0 0 1px;
       font-size: 9px; }
   .client {
-    padding: 35px 20px 0px; }
+    padding: 70px 20px 0; }
     .client__info {
       padding-top: 20px; }
   .text--services {
@@ -302,8 +300,7 @@
       height: 70px;
       padding-top: 17px; }
   .portfolio-slider-item {
-    width: 80% !important;
-    height: 250px; }
+    width: 80% !important; }
     .portfolio-slider-item__info__icon {
       display: none; }
     .portfolio-slider-item__info__heading {
@@ -363,8 +360,7 @@
     padding: 10px 0; }
   .client__photo {
     width: 50px;
-    height: 50px;
-    top: -2%; }
+    height: 50px; }
   .about-client__slider-controls .slick-dots {
     display: none; }
   .title {
