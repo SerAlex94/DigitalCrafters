@@ -72,6 +72,8 @@ gulp.task('img', function () {
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
     var buildCss = gulp.src([
         'src/css/main.css',
+        'src/css/*.css',
+        'src/libs/slick-carousel/slick/*.css',
         'src/css/libs.min.css'
     ])
         .pipe(gulp.dest('dist/css'));
