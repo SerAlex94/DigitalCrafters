@@ -54,11 +54,13 @@ input:-webkit-autofill
         width: 1080px
         padding: 0 20px
     &--about
-        width: 910px
+        width: 1100px
+        overflow: hidden
     &--services
         width: 1680px
     &--portfolio
         width: 1680px
+        overflow: hidden
     &--contact
         width: 910px
         padding: 0 20px
@@ -151,7 +153,6 @@ input:-webkit-autofill
         transition: 0.5s
         &:hover
             background-color: rgba(255, 255, 255, 0.3)
-            font-size: 14px
     &--banner
         background-color: #fff
         text-decoration: none
@@ -208,17 +209,15 @@ input:-webkit-autofill
         text-decoration: none
         padding: 10px 20px
     &--up
-        transform: scale(5)
         position: fixed
-        bottom: 50px
-        right: 90px
+        bottom: 10%
+        right: 5%
         text-align: center
-        width: 20px
-        height: 10px
+        padding-top: 8px
+        width: 80px
+        height: 40px
         background: rgba(255, 255, 255, .7)
         color: #673fbf
-        font-size: 9px
-        padding-top: 1px
         margin-right: calc(-1 * (100vw - 100%))
 
 /* --- pulse button --- */
@@ -292,11 +291,13 @@ input:-webkit-autofill
   float: left
   img
     margin-right: 2px
+    margin-bottom: 1px
 
 .slick-next
   float: right
   img
     margin-left: 3px
+    margin-bottom: 1px
 
 .slider-prev,
 .slider-next
@@ -310,12 +311,12 @@ input:-webkit-autofill
 .slider-prev
   margin-right: 5px
   img
-    margin-right: 2px
+    margin-left: 3px
 
 .slider-next
   float: right
   img
-    margin-left: 3px
+    margin-left: 5px
 
 /* --- title & text style --- */
 
@@ -393,6 +394,7 @@ input:-webkit-autofill
 
 .about-client
     position: relative
+    margin: 0 100px
     &__img
         margin: 40px 0 10px
     &__quotes
@@ -408,7 +410,7 @@ input:-webkit-autofill
     border-radius: 6px
     background-color: #fff
     position: relative
-    padding: 120px 80px 0
+    padding: 100px 60px 0
     &__info
         padding: 40px 0
         font-weight: 600
@@ -443,6 +445,7 @@ input:-webkit-autofill
     position: relative
     &__text
         text-align: left
+        line-height: 26px
     &__icon-wrapper
         position: absolute
         top: -17%
@@ -455,6 +458,7 @@ input:-webkit-autofill
         text-align: center
         padding-top: 38px
     &__heading
+        text-align: left
         width: 70%
         padding: 87px 0 0 30px
         color: #29384d

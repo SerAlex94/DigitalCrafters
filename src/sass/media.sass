@@ -136,10 +136,16 @@
         &__photo
             width: 100px
             height: 100px
+            top: -18%
 
     .services-item
         width: 370px
         height: 332px
+        &__text
+            line-height: 26px
+        &__heading
+            padding-left: 20px
+
 
     .portfolio-slider
         &-item
@@ -224,6 +230,10 @@
                 font-size: 12px
         &--banner
             font-size: 12px
+        &--up
+            width: 60px
+            height: 30px
+            padding-top: 4px
 
     .banner
         &__head
@@ -239,12 +249,8 @@
             line-height: 20px
 
     .client
-        width: 80% !important
-        margin-bottom: 50px
-        padding: 70px 40px 0
         &__photo
-            width: 70px
-            height: 70px
+            top: -8%
 
     .about-client
         &__quotes
@@ -263,7 +269,6 @@
             &__img
                 width: 100%
                 height: 50%
-                //float: none
             &__info
                 width: 100%
                 padding: 14px 24px 10px
@@ -285,9 +290,7 @@
 
 @media screen and (max-width: 576px)
     .container
-        width: 90%
-        &--about
-            overflow: hidden
+        width: 330px
 
     .nav
         top: 35px
@@ -319,7 +322,10 @@
             font-size: 9px
 
     .client
-        padding: 70px 20px 0
+        width: 300px !important
+        padding: 70px 15px 0
+        &__photo
+            top: -11%
         &__info
             padding-top: 20px
 
@@ -334,7 +340,12 @@
         &--popup
             padding: 20px
 
-    .about-client__quotes
+    .about-client
+        margin: 0
+        &__quotes
+            display: none
+
+    .slick-dots
         display: none
 
     .services-item
@@ -347,6 +358,7 @@
             line-height: 1.24
         &__text
             padding: 20px
+            line-height: 16px
         &__icon-wrapper
             top: -17%
             left: 30%
@@ -378,7 +390,7 @@
 
 @media screen and (max-width: 320px)
     .container
-        width: 200px
+        width: 270px
 
     .nav
         top: 35px
@@ -427,9 +439,11 @@
         padding: 10px 0
 
     .client
+        width: 200px !important
         &__photo
             width: 50px
             height: 50px
+            top: -6%
 
     .about-client__slider-controls .slick-dots
         display: none
@@ -458,7 +472,7 @@
     .portfolio-slider-item
         height: 90%
         &__img
-            width: 150px
+            width: 100%
             height: 150px
         &__info
             padding: 10px
