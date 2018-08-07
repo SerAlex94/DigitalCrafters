@@ -290,17 +290,22 @@ input:-webkit-autofill
 .slick-prev
   float: left
   img
-    margin-right: 2px
-    margin-bottom: 1px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
 .slick-next
   float: right
   img
-    margin-left: 3px
-    margin-bottom: 1px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
 .slider-prev,
 .slider-next
+  position: relative
   outline: none
   width: 32px
   height: 32px
@@ -310,13 +315,19 @@ input:-webkit-autofill
 
 .slider-prev
   margin-right: 5px
-  img
-    margin-left: 3px
+  &__img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
 
 .slider-next
   float: right
-  img
-    margin-left: 5px
+  &__img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
 
 /* --- title & text style --- */
 
